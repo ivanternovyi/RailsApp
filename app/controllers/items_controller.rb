@@ -16,6 +16,8 @@ class ItemsController < ApplicationController
     
     #/items/new GET
     def new
+        #in order to save hints after non-valid input
+        @item = Item.new
     end
     
     #/items/1/edit GET
@@ -24,11 +26,15 @@ class ItemsController < ApplicationController
     
     #/items POST
     def create
-       # @item = Item.create(name: params[:name], description: params[:description], price: params[:price], real: params[:real], weight: params[:weight])
+        @parameters = params.require(:item).permit(:name, :price, :description, :weight)
+        @item = Item.create(@parameters)
+        if @item.errors.empty?
+            redirect_to item_path(@item)
+        else
+            render "new"
+        end
         #Need item[variable] in the url zone
         #@item = Item.create(params[:item])
-       # render text: "#{@item.id}: #{@item.name} (#{!@item.new_record?})"
-        render text: "Item created!"
     end
     
     #/items/1 PUT
