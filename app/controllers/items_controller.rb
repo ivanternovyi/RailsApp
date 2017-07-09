@@ -22,6 +22,7 @@ class ItemsController < ApplicationController
     
     #/items/1/edit GET
     def edit
+        @item = Item.find(params[:id])
     end
     
     #/items POST
@@ -39,10 +40,21 @@ class ItemsController < ApplicationController
     
     #/items/1 PUT
     def update
+        @item = Item.find(params[:id])
+        @parameters = params.require(:item).permit(:name, :price, :description, :weight)
+        @item.update_attributes(@parameters)
+        if @item.errors.empty?
+            redirect_to item_path(@item)
+        else
+            render "edit"
+        end
     end
-    
+    #GET - render
     #/items/1 DELETE(POST)
     def destroy
+        @item = Item.find(params[:id])
+        @item.destroy
+        redirect_to action: "index"
     end
         
 end
