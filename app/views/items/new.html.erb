@@ -1,0 +1,12 @@
+<h1>Create new Item</h1>
+
+<%= form_for @item do |f| %>
+
+    <p>Name: <br/><%= f.text_field :name %></p>
+    <p>Price: <br/><%= f.text_field :price %></p>
+    <p>Description: <br/><%= f.text_field :description %></p>
+    <p>Weight: <br/><%= f.text_field :weight %></p>
+    
+    <p><%= f.submit "Create Item"%></p>
+
+<% end %>

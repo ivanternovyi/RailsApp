@@ -1,0 +1,31 @@
+<h1>Items</h1>
+
+<% if @items.empty? %>
+
+    <p> No items</p>
+
+<% else %>
+
+<table>
+    
+    <tr>
+        <th>Item Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th></th>
+        <th></th>
+    </tr>
+    
+    <% @items.each do |i| %>
+    
+    <tr>
+        <td><%= i.id %></td>
+        <td><%= link_to i.name, item_path(i) %></td>
+        <td><%= i.price %> uah</td>
+        <td><%= link_to "Delete", item_path(i), method: :delete, data: { confirm: "Are you want to delete?"} %></td>
+        <td>Rating: <%= i.votes_count %>, <%= link_to "+",
+        upvote_item_path(i) %></td>
+    </tr>
+    <% end %>
+</table>
+<% end %>
