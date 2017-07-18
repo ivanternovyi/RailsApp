@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :users
-    #  get ':controller(/:action(/:id))(.:format)'
+
+  root 'users#new'
+
 end

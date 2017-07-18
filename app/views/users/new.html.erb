@@ -8,7 +8,7 @@
 <%= form_for @user do |f| %>
 
   <div><%= f.label :login %></div>
-  <%= f.text_field :login %> <br />
+  <%= f.text_field :login %><br />
 
   <br />
 
@@ -17,7 +17,10 @@
 
   <br />
 
-  <div><%= f.submit "Submit" %></div>
+  <div><%= f.submit "Submit" %><br/></div>
 
 <% end %>
+<br/>
+<%= Time.now %>
+  <br/>
 </div>
