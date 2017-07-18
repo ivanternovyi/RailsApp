@@ -4,5 +4,7 @@ Rails.application.routes.draw do
     get :upvote, on: :member
     get :expensive, on: :collection
   end
+
+  resources :users
     #  get ':controller(/:action(/:id))(.:format)'
 end

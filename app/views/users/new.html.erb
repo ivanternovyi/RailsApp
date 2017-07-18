@@ -1,0 +1,23 @@
+<div align="center" style="margin: auto;
+    margin-top:10%;
+    width: 30%;
+    border: 3px solid #73AD21;
+    padding: 10px;">
+  <h2>Welcome!</h2>
+
+<%= form_for @user do |f| %>
+
+  <div><%= f.label :login %></div>
+  <%= f.text_field :login %> <br />
+
+  <br />
+
+  <div><%= f.label :password %></div>
+  <%= f.text_field :password %> <br />
+
+  <br />
+
+  <div><%= f.submit "Submit" %></div>
+
+<% end %>
+</div>

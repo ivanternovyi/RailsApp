@@ -1,0 +1,23 @@
+<h1>Users</h1>
+
+<% if @users.empty? %>
+
+    <p> No users</p>
+
+<% else %>
+
+<table>
+
+    <tr>
+        <th>Login:</th>
+    </tr>
+
+    <% @users.each do |i| %>
+
+    <tr>
+        <td><%= link_to i.login, user_path(i) %></td>
+    </tr>
+    <% end %>
+</table>
+<% end %>
+<h2><%= link_to "Go to Items", items_path%></h2>

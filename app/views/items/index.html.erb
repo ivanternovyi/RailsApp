@@ -1,3 +1,4 @@
+<h2><%= link_to "Sign up", new_user_url %> | <%= link_to "Sign in", new_user_url %></h2>
 <h1>Items</h1>
 
 <% if @items.empty? %>
@@ -7,7 +8,7 @@
 <% else %>
 
 <table>
-    
+
     <tr>
         <th>Item Id</th>
         <th>Name</th>
@@ -15,9 +16,9 @@
         <th></th>
         <th></th>
     </tr>
-    
+
     <% @items.each do |i| %>
-    
+
     <tr>
         <td><%= i.id %></td>
         <td><%= link_to i.name, item_path(i) %></td>
@@ -29,3 +30,5 @@
     <% end %>
 </table>
 <% end %>
+<h4><%= link_to "Show expensive Items", expensive_items_path%></h4>
+<h4><%= link_to "To main", items_path%></h4>
