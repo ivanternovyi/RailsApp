@@ -24,15 +24,18 @@ class UsersController < ApplicationController
         @parameters = params.require(:user).permit(:login, :password)
         @user = User.new(@parameters)
         for i in 0..@users.length
-          if @users[i] && @users[i].login == @user.login
-            redirect_to items_path
+          if @users[i] && @users[i].login == @user.login && @users[i].password == @user.password
+            flash[:success] = "Hi, #{@user.login}!"
+            redirect_to user_path(@users[i])
             return
           end
         end
         if @user.save
-            redirect_to items_path
+          flash[:success] = "Hi, #{@user.login}!"
+          redirect_to user_path(@user)
         else
-            redirect_to new_user_url
+            flash.now[:error] = "Input is invalid, try again!"
+            render "new"
         end
     end
 
@@ -51,4 +54,9 @@ class UsersController < ApplicationController
     def get_all_users
       @users = User.all
     end
+
+  #  def success_and_redirect
+  #    flash[:success] = "Hi, #{@user.login}!"
+  #    redirect_to user_path(@user)
+#    end
 end

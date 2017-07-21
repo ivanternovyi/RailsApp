@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>MyStore</title>
+    <%= favicon_link_tag '/favicon.ico' %>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +10,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <h4><div align="center" style="margin: auto;
+            margin-top:1%;
+            width: 30%;
+            border: 3px solid #73AD21;
+            padding: 10px;"
+            class="alert alert-<%= key %>"><%= value %></div></h4>
+      <% end %>
+      <%= yield %>
+    </div>
   </body>
 </html>
