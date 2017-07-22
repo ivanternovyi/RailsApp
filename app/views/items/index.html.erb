@@ -1,4 +1,11 @@
-<h2><%= link_to "Sign in", new_user_url %></h2>
+<% if $current_user %>
+    <% if $current_user.login.empty? %>
+      <h2><%= link_to "Sign in", new_user_url %></h2>
+    <% else %>
+      <h2><%= $current_user.login %> | <%= link_to "Sign out", root_path %></h2>
+    <% end %>
+<% end %>
+
 <h1>Items</h1>
 
 <% if @items.empty? %>

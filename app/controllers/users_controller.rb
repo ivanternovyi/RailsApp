@@ -4,11 +4,10 @@ class UsersController < ApplicationController
     before_action :get_all_users,  only: [:index, :create]
 
     def index
-      @users = User.all
     end
 
     def new
-      @user = User.new
+      $current_user = User.new
     end
 
     def show
@@ -22,17 +21,17 @@ class UsersController < ApplicationController
 
     def create
         @parameters = params.require(:user).permit(:login, :password)
-        @user = User.new(@parameters)
+        $current_user = User.new(@parameters)
         for i in 0..@users.length
-          if @users[i] && @users[i].login == @user.login && @users[i].password == @user.password
-            flash[:success] = "Hi, #{@user.login}!"
-            redirect_to user_path(@users[i])
+          if @users[i] && @users[i].login == $current_user.login && @users[i].password == $current_user.password
+            flash[:success] = "Hi, #{$current_user.login}!"
+            redirect_to items_path
             return
           end
         end
-        if @user.save
-          flash[:success] = "Hi, #{@user.login}!"
-          redirect_to user_path(@user)
+        if $current_user.save
+          flash[:success] = "Hi, #{$current_user.login}!"
+          redirect_to items_path
         else
             flash.now[:error] = "Input is invalid, try again!"
             render "new"
@@ -52,8 +51,9 @@ class UsersController < ApplicationController
     end
 
     def get_all_users
-      @users = User.all
+        @users = User.all
     end
+
 
   #  def success_and_redirect
   #    flash[:success] = "Hi, #{@user.login}!"
