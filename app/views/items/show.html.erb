@@ -3,5 +3,5 @@
 <ul>
     <li><%= @item.price %>.грн</li>
     <li><%= @item.weight %></li>
-    <li><%= @item.description %></li>
+    <li><%= urls_to_links(urls_to_images(@item.description)) %></li>
 </ul>
