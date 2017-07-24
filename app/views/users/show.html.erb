@@ -15,11 +15,9 @@
         width: 70%;
         border: 3px solid #cc0000;">
       <p style="text-align:center, font-color:red">
-      Type password to delete user
-      <%= form_for @user do |f| %>
-      <%= f.password_field :password %>
-          <button type="submit" style="margin-top:3%">Submit</button>
-      <% end %>
+      Press button to delete user <br/>
+      <% i = @user.id %>
+      <%= link_to "Delete", user_path(i), method: :delete, data: { confirm: "Are you want to delete?"} %>
       </p>
     </div>
 </div>
