@@ -12,7 +12,10 @@ class UsersController < ApplicationController
 
     def show
         unless @user
-            render :text => "Page not found!", status: 404
+            render_404
+        end
+        if  @user.login != $current_user.login
+            render_403
         end
     end
 
@@ -24,14 +27,12 @@ class UsersController < ApplicationController
         $current_user = User.new(@parameters)
         for i in 0..@users.length
           if @users[i] && @users[i].login == $current_user.login && @users[i].password == $current_user.password
-            flash[:success] = "Hi, #{$current_user.login}!"
-            redirect_to items_path
+            greet_and_redirect
             return
           end
         end
         if $current_user.save
-          flash[:success] = "Hi, #{$current_user.login}!"
-          redirect_to items_path
+          greet_and_redirect
         else
             flash.now[:error] = "Input is invalid, try again!"
             render "new"
@@ -40,7 +41,7 @@ class UsersController < ApplicationController
 
     def destroy
         @user.destroy
-        redirect_to action: "index"
+        redirect_to root_path
     end
 
     private
@@ -54,9 +55,8 @@ class UsersController < ApplicationController
         @users = User.all
     end
 
-
-  #  def success_and_redirect
-  #    flash[:success] = "Hi, #{@user.login}!"
-  #    redirect_to user_path(@user)
-#    end
+    def greet_and_redirect
+      flash[:success] = "Hi, #{$current_user.login}!"
+      redirect_to items_path
+   end
 end
