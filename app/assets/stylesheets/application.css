@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+ .flashDiv {margin: auto; text-align: center; margin-top:1%; width: 30%; border: 3px solid #73AD21; padding: 10px;}
+
+ .signInOutForm {text-align: center; width: 15%; border: 3px solid #73AD21; padding: 5px;}

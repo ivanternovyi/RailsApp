@@ -10,16 +10,26 @@
   </head>
 
   <body>
-    <div class="container">
+    <div>
       <% flash.each do |key, value| %>
-        <h4><div align="center" style="margin: auto;
-            margin-top:1%;
-            width: 30%;
-            border: 3px solid #73AD21;
-            padding: 10px;"
-            class="alert alert-<%= key %>"><%= value %></div></h4>
+        <h4><div  class="flashDiv" class="alert alert-<%= key %>"><%= value %></div></h4>
       <% end %>
-      <%= yield %>
     </div>
+    <% unless current_page?(new_user_path) || current_page?(root_path) %>
+      <div class="signInOutForm">
+        <% if $current_user == nil %>
+              <h2><%= link_to "Sign in", new_user_url %></h2>
+        <% else %>
+              <% if $current_user.login == nil || $current_user.login.empty? %>
+                  <h2><%= link_to "Sign in", new_user_url %></h2>
+              <% else %>
+                    <h2><%= $current_user.login %> | <%= link_to "Sign out", root_path %></h2>
+              <% end %>
+        <% end %>
+      </div>
+    <% end %>
+
+    <%= yield %>
+
   </body>
 </html>

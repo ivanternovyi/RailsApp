@@ -1,20 +1,13 @@
-<h1 style="text-align:center">User Info:</h1>
-<div align="center" style="margin: auto;
-    margin-top:2%;
-    width: 30%;
-    border: 3px solid #73AD21;
-    padding: 10px;">
+<h1 class="alignCenter">User Info:</h1>
+<div class="userInfo">
     <h2>Login: <%= @user.login %></h2>
     <h2>Password:
     <% @user.password.length.times do %>
       <a>*</a>
     <% end %>
     </h2>
-    <div align="center" style="margin: auto; background-color:#e6e6ff;
-        margin-top:2%;
-        width: 70%;
-        border: 3px solid #cc0000;">
-      <p style="text-align:center, font-color:red">
+    <div class="remDivUser">
+      <p class="alignCenter">
       Press button to delete user <br/>
       <% i = @user.id %>
       <%= link_to "Delete", user_path(i), method: :delete, data: { confirm: "Are you want to delete?"} %>

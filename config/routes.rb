@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  get 'admin/users_count' => 'admin#users_count'
+
   root 'users#new'
 
 end
