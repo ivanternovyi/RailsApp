@@ -34,8 +34,8 @@ class UsersController < ApplicationController
         if $current_user.save
           greet_and_redirect
         else
-            flash.now[:error] = "Input is invalid, try again!"
-            render "new"
+            flash[:error] = "Input is invalid, try again!"
+            redirect_to root_path
         end
     end
 
