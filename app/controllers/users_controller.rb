@@ -27,6 +27,7 @@ class UsersController < ApplicationController
         $current_user = User.new(@parameters)
         for i in 0..@users.length
           if @users[i] && @users[i].login == $current_user.login && @users[i].password == $current_user.password
+            $current_user = @users[i]
             greet_and_redirect
             return
           end
