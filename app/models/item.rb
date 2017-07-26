@@ -6,6 +6,8 @@ class Item < ApplicationRecord
     has_many :carts, through: :positions
 
     has_many :comments, as: :commentable
+
+    mount_uploader :image, ImageUploader
     #callbacks
   #  after_initialize { puts "init"}
 #    after_save {puts "save"}

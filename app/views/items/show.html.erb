@@ -1,7 +1,19 @@
 <h1><%= @item.name %></h1>
 
 <ul>
+    <li><%  if @item.image_url%>
+          <%= image_tag(@item.image_url.to_s, size: "220x170") %>
+        <% else %>
+           No file chosen to show given item!
+        <% end %>
+    </li>
     <li><%= @item.price %>.грн</li>
     <li><%= @item.weight %></li>
     <li><%= urls_to_links(urls_to_images(@item.description)) %></li>
 </ul>
+
+<br/>
+
+<h2 class="dropUnderline"><%= link_to "Edit", edit_item_path(@item) %></h2>
+
+<h2 class="dropUnderline"><%= link_to "To Items", items_path %></h2>

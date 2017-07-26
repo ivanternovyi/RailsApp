@@ -4,7 +4,13 @@ class ItemsController < ApplicationController
     before_action :check_if_admin, only: [:edit, :update, :new, :create, :destroy]
 
     def index
-        @items = Item.all
+        @items = Item
+        #DESC descending
+        @items = @items.where("price >= ?", params[:price_from])       if params[:price_from]
+        @items = @items.where("created_at >= ?", 1.day.ago)            if params[:today]
+        @items = @items.where("votes_count >= ?", params[:votes_from]) if params[:votes_from]
+        #@items = Active Record Relation
+        @items = @items.order("votes_count DESC", "price")
     end
     #/items/1 GET
     def show
@@ -30,8 +36,8 @@ class ItemsController < ApplicationController
 
     #/items POST
     def create
-        @parameters = params.require(:item).permit(:name, :price, :description, :weight)
-        @item = Item.create(@parameters)
+      #  @parameters = params.require(:item).permit(:name, :price, :description, :weight)
+        @item = Item.create(item_params)
         if @item.errors.empty?
             redirect_to item_path(@item)
         else
@@ -43,8 +49,8 @@ class ItemsController < ApplicationController
 
     #/items/1 PUT
     def update
-        @parameters = params.require(:item).permit(:name, :price, :description, :weight)
-        @item.update_attributes(@parameters)
+      #  @parameters = params.require(:item).permit(:name, :price, :description, :weight)
+        @item.update_attributes(item_params)
         if @item.errors.empty?
             redirect_to item_path(@item)
         else
@@ -68,5 +74,9 @@ class ItemsController < ApplicationController
     def find_item
          @item = Item.where(id: params[:id]).first
          render_404 unless @item
+    end
+
+    def item_params
+        params.require(:item).permit(:name, :price, :description, :weight, :image)
     end
 end

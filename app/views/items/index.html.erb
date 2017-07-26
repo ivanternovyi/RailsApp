@@ -6,22 +6,24 @@
 
 <% else %>
 
-<table>
+<table class="tableView">
 
-    <tr>
+    <tr class="thAndtdView">
         <th>Item Id</th>
         <th>Name</th>
         <th>Price</th>
-        <th></th>
-        <th></th>
+        <th>Created_at</th>
+        <th>Remove?</th>
+        <th>Rating</th>
     </tr>
 
     <% @items.each do |i| %>
 
-    <tr>
+    <tr class="thAndtdView">
         <td><%= i.id %></td>
         <td><%= link_to i.name, item_path(i) %></td>
         <td><%= i.price %> uah</td>
+        <td><%= i.created_at %></td>
         <td><%= link_to "Delete", item_path(i), method: :delete, data: { confirm: "Are you want to delete?"} %></td>
         <td>Rating: <%= i.votes_count %>, <%= link_to "+",
         upvote_item_path(i) %></td>

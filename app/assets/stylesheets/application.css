@@ -19,3 +19,7 @@
  .signInOutForm {text-align: center; width: 15%; border: 3px solid #73AD21; padding: 5px;}
 
  .dropUnderline :link {text-decoration: none; font-style: italic; font-family: sans-serif; color: #1a1a1a;}
+
+ .tableView  {border-collapse: collapse; border: 1px solid black}
+
+ .thAndtdView th, tr, td {border: 1px solid black; padding: 10px; text-align: center;}
