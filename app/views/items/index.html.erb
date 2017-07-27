@@ -1,10 +1,12 @@
-<h1>Items</h1>
+<h1 class="alignCenter" id="top">Items</h1>
 
 <% if @items.empty? %>
 
     <p> No items</p>
 
 <% else %>
+
+  <h4 class="alignCenter"><%= link_to "Show expensive Items", expensive_items_path%></h4>
 
 <table class="tableView">
 
@@ -21,7 +23,10 @@
 
     <tr class="thAndtdView">
         <td><%= i.id %></td>
-        <td><%= link_to i.name, item_path(i) %></td>
+        <td>
+          <%= image_tag(i.image_url(:thumb).to_s) %>
+          <h2 class="dropUnderline"><%= link_to i.name, item_path(i) %></h2>
+        </td>
         <td><%= i.price %> uah</td>
         <td><%= i.created_at %></td>
         <td><%= link_to "Delete", item_path(i), method: :delete, data: { confirm: "Are you want to delete?"} %></td>
@@ -31,5 +36,4 @@
     <% end %>
 </table>
 <% end %>
-<h4><%= link_to "Show expensive Items", expensive_items_path%></h4>
-<h4><%= link_to "To main", items_path%></h4>
+<a href="#" class="pointPosition"><img src="point.png" width="90" height="120" alt="return"></a>

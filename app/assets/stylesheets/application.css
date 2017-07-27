@@ -20,6 +20,12 @@
 
  .dropUnderline :link {text-decoration: none; font-style: italic; font-family: sans-serif; color: #1a1a1a;}
 
- .tableView  {border-collapse: collapse; border: 1px solid black}
+ .tableView  {margin: auto; text-align: center; border-collapse: collapse; border: 1px solid black}
 
  .thAndtdView th, tr, td {border: 1px solid black; padding: 10px; text-align: center;}
+
+ .alignCenter { text-align: center;}
+
+ .pointPosition {position: fixed; bottom: 5%; right: 5%; opacity: 0.8;}
+
+ .backgroundLayout { background-image: url(/background.jpg); background-repeat: no-repeat; background-size: cover;}
