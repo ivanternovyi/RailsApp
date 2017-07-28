@@ -23,8 +23,7 @@ class UsersController < ApplicationController
     end
 
     def create
-        @parameters = params.require(:user).permit(:login, :password)
-        $current_user = User.new(@parameters)
+        $current_user = User.new(users_params)
         for i in 0..@users.length
           if @users[i] && @users[i].login == $current_user.login && @users[i].password == $current_user.password
             $current_user = @users[i]
@@ -59,5 +58,9 @@ class UsersController < ApplicationController
     def greet_and_redirect
       flash[:success] = "Hi, #{$current_user.login}!"
       redirect_to items_path
+   end
+
+   def users_params
+      params.require(:user).permit!
    end
 end

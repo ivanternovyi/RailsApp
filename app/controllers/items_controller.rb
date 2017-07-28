@@ -36,7 +36,6 @@ class ItemsController < ApplicationController
 
     #/items POST
     def create
-      #  @parameters = params.require(:item).permit(:name, :price, :description, :weight)
         @item = Item.create(item_params)
         if @item.errors.empty?
             redirect_to item_path(@item)
@@ -49,7 +48,6 @@ class ItemsController < ApplicationController
 
     #/items/1 PUT
     def update
-      #  @parameters = params.require(:item).permit(:name, :price, :description, :weight)
         @item.update_attributes(item_params)
         if @item.errors.empty?
             redirect_to item_path(@item)
@@ -78,6 +76,6 @@ class ItemsController < ApplicationController
     end
 
     def item_params
-        params.require(:item).permit(:name, :price, :description, :weight, :image)
+        params.require(:item).permit(:name, :price, :real, :description, :weight, :image)
     end
 end

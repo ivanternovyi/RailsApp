@@ -1,4 +1,4 @@
-<h1>Users</h1>
+<h1 class="alignCenter">Users</h1>
 
 <% if @users.empty? %>
 
@@ -9,15 +9,17 @@
 <table class="tableView">
 
     <tr>
+        <th>Id:</th>
         <th>Login:</th>
     </tr>
 
     <% @users.each do |i| %>
 
     <tr>
+        <td><%= i.id %></td>
         <td><%= link_to i.login, user_path(i) %></td>
     </tr>
     <% end %>
 </table>
 <% end %>
-<h2><%= link_to "Go to Items", items_path%></h2>
+<h2 class="alignCenter"><%= link_to "Go to Items", items_path%></h2>

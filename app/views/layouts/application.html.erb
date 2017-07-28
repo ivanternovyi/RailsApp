@@ -18,10 +18,10 @@
     <% unless current_page?(new_user_path) || current_page?(root_path) %>
       <div class="signInOutForm">
         <% if $current_user == nil %>
-              <h2 class="dropUnderline"><%= link_to "Sign in", new_user_url %></h2>
+              <h2 class="dropUnderline"><%= link_to "Sign in", root_path %></h2>
         <% else %>
               <% if $current_user.login == nil || $current_user.login.empty? %>
-                  <h2 class="dropUnderline"><%= link_to "Sign in", new_user_url %></h2>
+                  <h2 class="dropUnderline"><%= link_to "Sign in", root_path %></h2>
               <% else %>
                     <h2 class="dropUnderline"><%= link_to $current_user.login, user_path($current_user) %>
                       | <%= link_to "Sign out", root_path %></h2>
