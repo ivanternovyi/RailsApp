@@ -1,0 +1,27 @@
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
+
+  input[type=submit] { @extend .btn; @extend .btn-success;}
+
+ .flashDiv {margin: auto; text-align: center; margin-top:1%; width: 30%; border: 3px solid #73AD21; padding: 10px;}
+
+ .signInOutForm {text-align: center; width: 17%; border: 3px solid #73AD21; padding: 5px;}
+
+ .dropUnderline :link {text-decoration: none; font-style: italic; font-family: sans-serif; color: #1a1a1a;}
+
+ .tableView  {margin: auto; text-align: center; border-collapse: collapse; border: 1px solid black}
+
+ .thAndtdView th, tr, td {border: 1px solid black; padding: 10px; text-align: center;}
+
+ .alignCenter { text-align: center;}
+
+ .pointPosition {position: fixed; bottom: 5%; right: 5%; opacity: 0.8;}
+
+ .backgroundLayout { background-image: url(/background.jpg); background-repeat: no-repeat; background-size: cover;}
+
+ .loginForm {margin: auto; margin-top:7%; width: 30%; text-align: center; border: 3px solid #73AD21; padding: 10px;}
+
+ .userInfo { margin: auto; text-align: center; margin-top:2%; width: 30%; border: 3px solid #73AD21; padding: 10px;}
+
+ .remDivUser {margin: auto; background-color:#e6e6ff; text-align: center; margin-top:2%; width: 70%;
+   border: 3px solid #cc0000;}

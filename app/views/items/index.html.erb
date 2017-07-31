@@ -28,7 +28,7 @@
           <h2 class="dropUnderline"><%= link_to i.name, item_path(i) %></h2>
         </td>
         <td><%= i.price %> uah</td>
-        <td><%= i.created_at %></td>
+        <td><%= i.created_at.strftime('%Y-%m-%d') %></td>
         <td><%= link_to "Delete", item_path(i), method: :delete, data: { confirm: "Are you want to delete?"} %></td>
         <td>Rating: <%= i.votes_count %>, <%= link_to "+",
         upvote_item_path(i) %></td>

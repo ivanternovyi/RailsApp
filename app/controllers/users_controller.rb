@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     end
 
     def create
-        $current_user = User.new(users_params)
+        $current_user = User.new(user_params)
         for i in 0..@users.length
           if @users[i] && @users[i].login == $current_user.login && @users[i].password == $current_user.password
             $current_user = @users[i]
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
       redirect_to items_path
    end
 
-   def users_params
+   def user_params
       params.require(:user).permit!
    end
 end

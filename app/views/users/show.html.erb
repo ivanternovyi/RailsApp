@@ -10,7 +10,9 @@
       <p class="alignCenter">
       Press button to delete user <br/>
       <% i = @user.id %>
-      <%= link_to "Delete", user_path(i), method: :delete, data: { confirm: "Are you want to delete?"} %>
+      <div class="btn btn-warning">
+        <%= link_to "Delete", user_path(i), method: :delete, data: { confirm: "Are you want to delete?"} %>
+      </div>
       </p>
     </div>
 </div>
