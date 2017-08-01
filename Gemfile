@@ -28,6 +28,8 @@ gem 'mini_magick'
 gem 'haml-rails'
 #Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
+#Form usage
+gem 'simple_form', git: 'git://github.com/plataformatec/simple_form'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

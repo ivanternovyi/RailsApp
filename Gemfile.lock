@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/plataformatec/simple_form
+  revision: f98b158a605f9a76dd0a4f60ae8549a3c5f863a5
+  specs:
+    simple_form (3.5.0)
+      actionpack (> 4, < 5.2)
+      activemodel (> 4, < 5.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -198,6 +206,7 @@ DEPENDENCIES
   puma
   rails (~> 5.0.4)
   sass-rails (>= 3.2)
+  simple_form!
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3

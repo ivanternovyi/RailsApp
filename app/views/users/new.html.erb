@@ -1,22 +1,16 @@
 <div class="loginForm">
   <h2>Welcome!</h2>
+    <div class="loginFormInside">
+      <%= simple_form_for $current_user do |f| %>
 
-<%= form_for $current_user do |f| %>
+      <%= f.input :login%>
+      <br />
 
-  <div><%= f.label :login %></div>
-  <%= f.text_field :login %><br />
+      <%= f.input :password, placeholder: 'At least six characters.'%>
 
-  <br />
+      <%= f.submit "Submit" %>
 
-  <div><%= f.label :password %></div>
-  <%= f.password_field :password %> <br />
-
-  <br />
-
-  <div><%= f.submit "Submit" %><br/></div>
-
-<% end %>
-
-<br/>
+      <% end %>
+  </div>
 
 </div>
