@@ -29,7 +29,9 @@
         </td>
         <td><%= i.price %> uah</td>
         <td><%= i.created_at.strftime('%Y-%m-%d') %></td>
-        <td><%= link_to "Delete", item_path(i), method: :delete, data: { confirm: "Are you want to delete?"} %></td>
+        <td><i class="material-icons navbar-text">
+          <%= link_to "delete", item_path(i), method: :delete, data: { confirm: "Are you want to delete?"} %>
+        </i></td>
         <td>Rating: <%= i.votes_count %>, <%= link_to "+",
         upvote_item_path(i) %></td>
     </tr>

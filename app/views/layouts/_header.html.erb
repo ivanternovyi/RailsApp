@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-default navbar-default">
+
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <%= image_tag '/favicon.ico', height: '30', width: '30' %>
+      </a>
+
+      <a class="navbar-brand" href="#"><strong>My Store</strong></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-right">
+             <% unless current_page?(new_user_path) || current_page?(root_path) %>
+              <% if $current_user == nil %>
+                  <li><%= link_to "Sign in", root_path %> </li>
+              <% else %>
+                    <% if $current_user.login == nil || $current_user.login.empty? %>
+                        <li><%= link_to "Sign in", root_path %> </li>
+                    <% else %>
+                          <li> <i class="material-icons navbar-text">person</i></li>
+                          <li> <%= link_to $current_user.login, user_path($current_user) %> </li>
+                          <li> <i class="material-icons navbar-text"><%= link_to "close", root_path %></i> </li>
+                    <% end %>
+              <% end %>
+          <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

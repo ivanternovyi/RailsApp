@@ -4,33 +4,23 @@
     <title>MyStore</title>
     <%= favicon_link_tag '/favicon.ico' %>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render "layouts/header" %>
     <div>
       <% flash.each do |key, value| %>
         <h4><div  class="flashDiv" class="alert alert-<%= key %>"><%= value %></div></h4>
       <% end %>
     </div>
-    <% unless current_page?(new_user_path) || current_page?(root_path) %>
-      <div class="signInOutForm">
-        <% if $current_user == nil %>
-              <h2 class="dropUnderline"><%= link_to "Sign in", root_path %></h2>
-        <% else %>
-              <% if $current_user.login == nil || $current_user.login.empty? %>
-                  <h2 class="dropUnderline"><%= link_to "Sign in", root_path %></h2>
-              <% else %>
-                    <h2 class="dropUnderline"><%= link_to $current_user.login, user_path($current_user) %>
-                      | <%= link_to "Sign out", root_path %></h2>
-              <% end %>
-        <% end %>
-      </div>
-    <% end %>
 
     <%= yield %>
+
+    <%= render "layouts/footer" %>
 
   </body>
 </html>
