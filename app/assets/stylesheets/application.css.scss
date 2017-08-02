@@ -17,7 +17,8 @@
 
  .pointPosition {position: fixed; bottom: 6%; right: 5%; opacity: 0.8;}
 
- .backgroundLayout { background-image: url(/background.jpg); background-repeat: no-repeat; background-size: cover;}
+ .backgroundLayout { background: -webkit-linear-gradient(left, rgba(226,226,226,1) 0%,
+    rgba(254,254,254,1) 29%, rgba(254,254,254,1) 73%, rgba(209,209,209,1) 100%);}
 
  .loginForm {margin: auto; margin-top:7%; width: 30%; text-align: center; border: 3px solid #73AD21; padding: 10px;}
 
@@ -29,5 +30,7 @@
  .newItemForm {margin-left: 2%; margin-right: 78%}
 
  .loginFormInside {margin: 0 auto; width: 65%;}
+
+ .marginLeft {margin-left: 5%;}
 
  .footer {position:fixed; bottom: 0%; width: 100%; text-align:center; margin-top:2%}
