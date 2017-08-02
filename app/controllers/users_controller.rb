@@ -17,6 +17,8 @@ class UsersController < ApplicationController
         if  @user.login != $current_user.login
             render_403
         end
+        locale = Timeout::timeout(5){
+           Net::HTTPS.get_response(URI.parse('https://ipinfo.io/country')).body } rescue "US"
     end
 
     def edit

@@ -26,6 +26,8 @@ gem 'carrierwave'
 gem 'mini_magick'
 #To use HAML
 gem 'haml-rails'
+#Get location by IP
+gem 'geocoder'
 #Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 #Form usage
