@@ -20,4 +20,45 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  item:
+    weight: '.kg'
+    price: '.uah'
+    edit: 'Edit'
+    hEdit: 'Edit item'
+    btnEdit: 'Save'
+    btnCreate: 'Create'
+    hCreate: 'Create new item'
+    heading: 'Items'
+    sure?: 'Are you sure to delete?'
+    created?: 'Date of creation'
+    remove?: 'Remove?'
+    rating: 'Rating'
+    showExpensive: 'Show expensive items'
+
+  user:
+    heading: 'Users'
+    greeting: 'Welcome!'
+    submit: 'Submit'
+    userInfo: 'User Info'
+    country: 'Country'
+    pressBtn: 'Press button to destroy'
+    headerSignIn: 'Sign in'
+    footerRights: 'Ivan Ternovyi'
+
+  flash:
+    error: 'Input is invalid, try again!'
+    success: 'Hi'
+
+  activerecord:
+    models:
+      item: 'Item'
+    attributes:
+      item:
+        price: 'Price'
+        name: 'Name'
+        description: 'Description'
+        weight: 'Weight'
+        image: 'Image'
+      user:
+        login: 'Login'
+        password: 'Password'

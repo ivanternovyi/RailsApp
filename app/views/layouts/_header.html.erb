@@ -6,11 +6,18 @@
         <%= image_tag '/favicon.ico', height: '30', width: '30' %>
       </a>
 
-      <a class="navbar-brand" href="/items"><strong>My Store</strong></a>
+      <a class="navbar-brand" href="/<%=I18n.locale%>/items"><strong>My Store</strong></a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
+             <li class="navbar-text">
+               <p>
+                 <%= link_to_unless I18n.locale == :en, "En", locale: :en %>
+                 |
+                 <%= link_to_unless I18n.locale == :ua, "Ua", locale: :ua %>
+               </p>
+             </li>
              <li>
                <div class="dropdown">
                  <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="margin-top:10%">
@@ -28,12 +35,11 @@
            </li>
                <% unless current_page?(new_user_path) || current_page?(root_path) %>
                 <% if $current_user == nil %>
-                    <li><%= link_to "Sign in", root_path %> </li>
+                    <li><%= link_to t("user.headerSignIn"), root_path %> </li>
                 <% else %>
                       <% if $current_user.login == nil || $current_user.login.empty? %>
-                          <li><%= link_to "Sign in", root_path %> </li>
+                          <li><%= link_to t("user.headerSignIn"), root_path %> </li>
                       <% else %>
-                            <li> <i class="material-icons navbar-text">person</i></li>
                             <li> <%= link_to $current_user.login, user_path($current_user) %> </li>
                             <li> <i class="material-icons navbar-text"><%= link_to "close", root_path %></i> </li>
                       <% end %>

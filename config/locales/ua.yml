@@ -1,0 +1,64 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+ua:
+  item:
+    weight: '.кг'
+    price: '.грн'
+    edit: 'Змінити'
+    hEdit: 'Змінити товар'
+    btnEdit: 'Змінити'
+    btnCreate: 'Створити'
+    hCreate: 'Додати товар'
+    heading: 'Товари'
+    sure?: 'Ви справді хочете видалити товар?'
+    created?: 'Дата створення'
+    remove?: 'Видалити?'
+    rating: 'Рейтинг'
+    showExpensive: 'Показати дорогі товари'
+
+  user:
+    heading: 'Користувачі'
+    greeting: 'Ласкаво просимо!'
+    submit: 'Підтвердити'
+    userInfo: 'Інформація про Вас'
+    country: 'Країна'
+    pressBtn: 'Натисніть кнопку, для видалення'
+    headerSignIn: 'Увійти'
+    footerRights: 'Іван Терновий'
+
+  flash:
+    error: 'Неправильний ввід, спробуйте ще раз!'
+    success: 'Привіт'
+
+  activerecord:
+    models:
+      item: 'Товар'
+    attributes:
+      item:
+        price: 'Ціна'
+        name: 'Назва'
+        description: 'Опис'
+        weight: 'Вага'
+        image: 'Зображення'
+      user:
+        login: 'Логін'
+        password: 'Пароль'

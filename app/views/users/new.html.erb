@@ -1,5 +1,5 @@
 <div class="loginForm">
-  <h2>Welcome!</h2>
+  <h2><%= t("user.greeting") %></h2>
     <div class="loginFormInside">
       <%= simple_form_for $current_user do |f| %>
 
@@ -8,7 +8,7 @@
 
       <%= f.input :password, placeholder: 'At least six characters.'%>
 
-      <%= f.submit "Submit" %>
+      <%= f.submit t("user.submit") %>
 
       <% end %>
   </div>

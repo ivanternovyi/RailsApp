@@ -1,22 +1,22 @@
-<h1 class="alignCenter" id="top">Items</h1>
+<h1 class="alignCenter" id="top"><%= t('item.heading')%></h1>
 
 <% if @items.empty? %>
 
-    <p> No items</p>
+    <p class="alignCenter"> No items </p>
 
 <% else %>
 
-  <h4 class="alignCenter"><%= link_to "Show expensive Items", expensive_items_path%></h4>
+  <h4 class="alignCenter"><%= link_to t("item.showExpensive"), expensive_items_path%></h4>
 
 <table class="tableView">
 
     <tr class="thAndtdView">
-        <th>Item Id</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Created_at</th>
-        <th>Remove?</th>
-        <th>Rating</th>
+        <th> Id </th>
+        <th><%= t("activerecord.attributes.item.name") %></th>
+        <th><%= t("activerecord.attributes.item.price") %></th>
+        <th><%= t("item.created?") %></th>
+        <th><%= t("item.remove?") %></th>
+        <th><%= t("item.rating") %> </th>
     </tr>
 
     <% @items.each do |i| %>
@@ -27,12 +27,12 @@
           <%= image_tag(i.image_url(:thumb).to_s) %>
           <h2 class="dropUnderline"><%= link_to i.name, item_path(i) %></h2>
         </td>
-        <td><%= i.price %> uah</td>
+        <td><%= i.price %> <%= t("item.price") %></td>
         <td><%= i.created_at.strftime('%Y-%m-%d') %></td>
         <td><i class="material-icons navbar-text">
-          <%= link_to "delete", item_path(i), method: :delete, data: { confirm: "Are you want to delete?"} %>
+          <%= link_to "delete", item_path(i), method: :delete, data: { confirm: t("item.sure?")} %>
         </i></td>
-        <td>Rating: <%= i.votes_count %>, <%= link_to "+",
+        <td><%= t("item.rating") %> <%= i.votes_count %>, <%= link_to "+",
         upvote_item_path(i) %></td>
     </tr>
     <% end %>

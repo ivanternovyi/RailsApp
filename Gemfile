@@ -28,8 +28,13 @@ gem 'mini_magick'
 gem 'haml-rails'
 #Get location by IP
 gem 'geocoder'
+#Pagination gem
+gem 'will_paginate'
+gem 'kaminari'
 #Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
+#Internationalization
+gem 'i18n'
 #Form usage
 gem 'simple_form', git: 'git://github.com/plataformatec/simple_form'
 # Use jquery as the JavaScript library

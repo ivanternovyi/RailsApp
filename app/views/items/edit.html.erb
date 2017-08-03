@@ -1,11 +1,11 @@
 <div class="newItemForm">
-  <h1>Edit Item</h1>
+  <h1><%= t("item.hEdit") %></h1>
 
 <%= simple_form_for @item do |f| %>
     <!-- locals in order to have access to variable f from partial -->
     <%= render partial: "form", locals: {f: f}%>
 
-    <p><%= f.submit "Save Item"%></p>
+    <p><%= f.submit t("item.btnEdit")%></p>
 
 <% end %>
 </div>

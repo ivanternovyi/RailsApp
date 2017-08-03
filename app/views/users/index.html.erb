@@ -1,4 +1,4 @@
-<h1 class="alignCenter">Users</h1>
+<h1 class="alignCenter"><%= t("user.heading")%></h1>
 
 <% if @users.empty? %>
 
@@ -10,7 +10,7 @@
 
     <tr>
         <th>Id:</th>
-        <th>Login:</th>
+        <th><%= t("activerecord.attributes.user.login")%>:</th>
     </tr>
 
     <% @users.each do |i| %>
@@ -22,4 +22,3 @@
     <% end %>
 </table>
 <% end %>
-<h2 class="alignCenter"><%= link_to "Go to Items", items_path%></h2>

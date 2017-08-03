@@ -35,7 +35,7 @@ class UsersController < ApplicationController
         if $current_user.save
           greet_and_redirect
         else
-            flash[:error] = "Input is invalid, try again!"
+            flash[:error] = t("flash.error")
             redirect_to root_path
         end
     end
@@ -57,7 +57,7 @@ class UsersController < ApplicationController
     end
 
     def greet_and_redirect
-      flash[:success] = "Hi, #{$current_user.login}!"
+      flash[:success] =  t("flash.success") + ", #{$current_user.login}!"
       redirect_to items_path
    end
 
