@@ -3,7 +3,8 @@
 
   input[type=submit] { @extend .btn; @extend .btn-success;}
 
- .flashDiv {margin: auto; text-align: center; margin-top:1%; width: 30%; border: 3px solid #73AD21; padding: 10px;}
+ .flashDiv {margin: auto; text-align: center; margin-top:1%; width: 20%; padding: 10px;
+    background-color: #eaeae1; border: 3px solid #cbcbb4;}
 
  .signInOutForm {text-align: center; width:17%; border: 3px solid #73AD21; padding: 5px; margin:2%; margin-top: 4%}
 

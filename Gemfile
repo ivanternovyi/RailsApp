@@ -35,6 +35,9 @@ gem 'kaminari'
 gem 'bootstrap-sass', '~> 3.3.6'
 #Internationalization
 gem 'i18n'
+#Exception Notification
+gem 'exception_notification'
+gem 'letter_opener', group: :development
 #Form usage
 gem 'simple_form', git: 'git://github.com/plataformatec/simple_form'
 # Use jquery as the JavaScript library
