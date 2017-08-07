@@ -42,6 +42,11 @@ gem 'letter_opener', group: :development
 gem 'simple_form', git: 'git://github.com/plataformatec/simple_form'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+group :test do
+   gem 'rspec-rails'
+   gem 'factory_girl_rails'
+end
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

@@ -52,7 +52,6 @@ class ItemsController < ApplicationController
         if @item.errors.empty?
             redirect_to item_path(@item)
         else
-            flash.now[:error] = "It seems that your input is not valid, try again.."
             render "edit"
         end
     end
