@@ -18,7 +18,7 @@
                  <%= link_to_unless I18n.locale == :ua, "Ua", locale: :ua %>
                </p>
              </li>
-             <li>
+             <!-- <li>
                <div class="dropdown">
                  <button  class="btn btn-default  dropdown-toggle" data-toggle="dropdown"  style="margin-top:10%">
                    <i class="material-icons">phone</i>
@@ -32,20 +32,17 @@
                    </li>
                  </ul>
                </div>
-           </li>
-               <% unless current_page?(new_user_path) || current_page?(root_path) %>
-                <% if $current_user == nil %>
-                    <li><%= link_to t("user.headerSignIn"), root_path %> </li>
-                <% else %>
-                      <% if $current_user.login == nil || $current_user.login.empty? %>
-                          <li><%= link_to t("user.headerSignIn"), root_path %> </li>
-                      <% else %>
-                            <li> <%= link_to $current_user.login, user_path($current_user) %> </li>
-                            <li> <i class="material-icons navbar-text"><%= link_to "close", root_path %></i> </li>
-                      <% end %>
-                <% end %>
-              <% end %>
-      </ul>
+           </li> -->
+            <% if user_signed_in? %>
+            <li>
+                 <li><%= link_to('<span class="glyphicon glyphicon-cog"></span> '.html_safe + current_user.email,
+                  edit_user_registration_path) %></li>
+            </li>
+            <li>
+                 <%= link_to('<span class="glyphicon glyphicon-off"></span> Log out'.html_safe, destroy_user_session_path, method: :delete) %>
+            </li>
+            <% end %>
+       </ul>
     </div>
   </div>
 </nav>

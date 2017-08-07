@@ -35,6 +35,10 @@ gem 'kaminari'
 gem 'bootstrap-sass', '~> 3.3.6'
 #Internationalization
 gem 'i18n'
+#Authentification gem
+gem 'devise'
+#To make authentification with social networks
+gem 'omniauth', '~> 1.6', '>= 1.6.1'
 #Exception Notification
 gem 'exception_notification'
 gem 'letter_opener', group: :development
