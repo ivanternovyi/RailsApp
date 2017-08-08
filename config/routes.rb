@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   scope "(:locale)", :locale => /en|ua/ do
-    
+
     resources :items do
       get :upvote, on: :member
       get :expensive, on: :collection
@@ -15,5 +15,6 @@ Rails.application.routes.draw do
 
     root to: 'items#index'
 
+    get '*path' => redirect('/404')
   end
 end
