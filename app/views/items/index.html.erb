@@ -6,10 +6,22 @@
 
 <% else %>
 
-  <h4 class="alignCenter"><%= link_to t("item.showExpensive"), expensive_items_path%></h4>
+<div class="filterForm">
+  <%= simple_form_for :search, :method => :get do |f| %>
+      <%= f.input :price_from, as: :range, required: false,
+                input_html: {min: 0, max: @maxPrice, step: '1', value: 0 }%>
+      <%= f.input :price_to, as: :range, required: false,
+                input_html: {min: 0, max: @maxPrice, step: '1', value: @maxPrice } %>
+      <%= f.input :votes_from, as: :range, required: false,
+                input_html: {min: 0, max: @maxVotes, step: '1', value: 0 } %>
+      <%= f.input :votes_to, as: :range, required: false,
+                input_html: {min: 0, max: @maxVotes, step: '1', value: @maxVotes } %>
+    <p><%= f.submit "Find"%></p>
+  <% end %>
+</div>
 
-<table class="tableView">
 
+  <table class="tableView">
     <tr class="thAndtdView">
         <th> Id </th>
         <th><%= t("activerecord.attributes.item.name") %></th>
@@ -18,26 +30,25 @@
         <th><%= t("item.remove?") %></th>
         <th><%= t("item.rating") %> </th>
     </tr>
-
     <% @items.each do |i| %>
-
-    <tr class="thAndtdView">
-        <td><%= i.id %></td>
-        <td>
-          <%= image_tag(i.image_url(:thumb).to_s) %>
-          <h2 class="dropUnderline"><%= link_to i.name, item_path(i) %></h2>
-        </td>
-        <td><%= i.price %> <%= t("item.price") %></td>
-        <td><%= i.created_at.strftime('%Y-%m-%d') %></td>
-        <td><i class="material-icons navbar-text">
-          <%= link_to "delete", item_path(i), method: :delete, data: { confirm: t("item.sure?")} %>
-        </i></td>
-        <td><%= t("item.rating") %> <%= i.votes_count %>, <%= link_to "+",
-        upvote_item_path(i) %></td>
-    </tr>
+      <tr class="thAndtdView">
+          <td><%= i.id %></td>
+          <td>
+            <%= image_tag(i.image_url(:thumb).to_s) %>
+            <h2 class="dropUnderline"><%= link_to i.name, item_path(i) %></h2>
+          </td>
+          <td><%= i.price %> <%= t("item.price") %></td>
+          <td><%= i.created_at.strftime('%Y-%m-%d') %></td>
+          <td><i class="material-icons navbar-text">
+            <%= link_to "delete", item_path(i), method: :delete, data: { confirm: t("item.sure?")} %>
+          </i></td>
+          <td><%= t("item.rating") %> <%= i.votes_count %>, <%= link_to "+",
+          upvote_item_path(i) %></td>
+      </tr>
     <% end %>
-</table>
+  </table>
 <% end %>
+
 <a href="#" class="pointPosition">
   <%= image_tag("/top.png", height: '90', width: '90') %>
 </a>

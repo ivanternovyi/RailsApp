@@ -4,24 +4,25 @@ class ItemsController < ApplicationController
     before_action :check_if_admin, only: [:edit, :update, :new, :create, :destroy]
 
     def index
-        @items = Item
+        @items = Item.all
+        @maxPrice = @items.map(&:price).max
+        @maxVotes = @items.map(&:votes_count).max
+        if params[:search]
+          @items = @items.where("price >= ?", params[:search][:price_from])       if params[:search][:price_from]
+          @items = @items.where("price <= ?", params[:search][:price_to])         if params[:search][:price_to]
+          @items = @items.where("votes_count >= ?", params[:search][:votes_from]) if params[:search][:votes_from]
+          @items = @items.where("votes_count <= ?", params[:search][:votes_to])   if params[:search][:votes_to]
+        end
         #DESC descending
-        @items = @items.where("price >= ?", params[:price_from])       if params[:price_from]
-        @items = @items.where("created_at >= ?", 1.day.ago)            if params[:today]
-        @items = @items.where("votes_count >= ?", params[:votes_from]) if params[:votes_from]
         #@items = Active Record Relation
         @items = @items.order("votes_count DESC", "price")
     end
+    
     #/items/1 GET
     def show
         unless @item
             render :text => "Page not found!", status: 404
         end
-    end
-
-    def expensive
-        @items = Item.where("price > 1000")
-        render "index"
     end
 
     #/items/new GET
