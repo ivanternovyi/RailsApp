@@ -2,8 +2,8 @@
 
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="/<%=I18n.locale%>/items">
-        <%= image_tag '/favicon.ico', height: '30', width: '30' %>
+      <a href="/<%=I18n.locale%>/items">
+        <%= image_tag '/faviconNav.ico', height: '60', width: '50' %>
       </a>
 
       <a class="navbar-brand" href="/<%=I18n.locale%>/items"><strong>My Store</strong></a>
@@ -18,29 +18,21 @@
                  <%= link_to_unless I18n.locale == :ua, "Ua", locale: :ua %>
                </p>
              </li>
-             <!-- <li>
-               <div class="dropdown">
-                 <button  class="btn btn-default  dropdown-toggle" data-toggle="dropdown"  style="margin-top:10%">
-                   <i class="material-icons">phone</i>
-                 </button>
-                 <ul class="dropdown-menu">
-                   <li class="marginLeft"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                      example@gmail.com
-                   </li>
-                   <li class="marginLeft"><span class="glyphicon glyphicon-send" aria-hidden="true"></span>
-                      telegram account
-                   </li>
-                 </ul>
-               </div>
-           </li> -->
             <% if user_signed_in? %>
-            <li>
-                 <li><%= link_to('<span class="glyphicon glyphicon-cog"></span> '.html_safe + current_user.email,
-                  edit_user_registration_path) %></li>
-            </li>
-            <li>
-                 <%= link_to('<span class="glyphicon glyphicon-off"></span> Log out'.html_safe, destroy_user_session_path, method: :delete) %>
-            </li>
+              <li>
+                   <li><%= link_to('<span class="glyphicon glyphicon-cog"></span> '.html_safe + current_user.email,
+                    edit_user_registration_path) %></li>
+              </li>
+              <li>
+                   <%= link_to('<span class="glyphicon glyphicon-off"></span> Log out'.html_safe, destroy_user_session_path, method: :delete) %>
+              </li>
+            <% else %>
+              <li>
+                  <%=link_to('<span class="glyphicon glyphicon-log-in"></span> Login'.html_safe, new_user_session_path)%>
+              </li>
+              <li>
+                  <%=link_to('<span class="glyphicon glyphicon-saved"></span> Register'.html_safe, new_user_registration_path)%>
+              </li>
             <% end %>
        </ul>
     </div>
