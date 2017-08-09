@@ -29,8 +29,7 @@ gem 'haml-rails'
 #Get location by IP
 gem 'geocoder'
 #Pagination gem
-gem 'will_paginate'
-gem 'kaminari'
+gem 'will_paginate', '>= 3.1'
 #Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
 #Internationalization

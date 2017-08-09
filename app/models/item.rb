@@ -9,6 +9,14 @@ class Item < ApplicationRecord
     has_and_belongs_to_many  :orders
 
     mount_uploader :image, ImageUploader
+
+    def self.search(term, page)
+      if term
+        where('name LIKE ?', "%#{term}%").paginate(page: page, per_page: 10)
+      else
+        paginate(page: page, per_page: 10).order("votes_count DESC", "price")
+      end
+    end
     #callbacks
   #  after_initialize { puts "init"}
 #    after_save {puts "save"}

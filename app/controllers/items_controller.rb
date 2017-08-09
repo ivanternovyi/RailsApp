@@ -9,15 +9,15 @@ class ItemsController < ApplicationController
         @minPrice = @items.map(&:price).min
         @maxVotes = @items.map(&:votes_count).max
         @minVotes = @items.map(&:votes_count).min
+        @items = Item.search(params[:term], params[:page])
         if params[:search]
+          #DESC descending
+          #@items = Active Record Relation
           @items = @items.where("price >= ?", params[:search][:price_from])       if params[:search][:price_from]
           @items = @items.where("price <= ?", params[:search][:price_to])         if params[:search][:price_to]
           @items = @items.where("votes_count >= ?", params[:search][:votes_from]) if params[:search][:votes_from]
           @items = @items.where("votes_count <= ?", params[:search][:votes_to])   if params[:search][:votes_to]
         end
-        #DESC descending
-        #@items = Active Record Relation
-        @items = @items.order("votes_count DESC", "price")
     end
 
     #/items/1 GET
