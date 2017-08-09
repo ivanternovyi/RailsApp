@@ -9,13 +9,13 @@
 <div class="filterForm">
   <%= simple_form_for :search, :method => :get do |f| %>
       <%= f.input :price_from, as: :range, required: false,
-                input_html: {min: 0, max: @maxPrice, step: '1', value: 0 }%>
+                input_html: {min: @minPrice, max: @maxPrice, step: '1', value: @minPrice }%>
       <%= f.input :price_to, as: :range, required: false,
-                input_html: {min: 0, max: @maxPrice, step: '1', value: @maxPrice } %>
+                input_html: {min: @minPrice, max: @maxPrice, step: '1', value: @maxPrice } %>
       <%= f.input :votes_from, as: :range, required: false,
-                input_html: {min: 0, max: @maxVotes, step: '1', value: 0 } %>
+                input_html: {min: @minVotes, max: @maxVotes, step: '1', value: @minVotes } %>
       <%= f.input :votes_to, as: :range, required: false,
-                input_html: {min: 0, max: @maxVotes, step: '1', value: @maxVotes } %>
+                input_html: {min: @minVotes, max: @maxVotes, step: '1', value: @maxVotes } %>
     <p><%= f.submit "Find"%></p>
   <% end %>
 </div>

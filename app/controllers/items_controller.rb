@@ -6,7 +6,9 @@ class ItemsController < ApplicationController
     def index
         @items = Item.all
         @maxPrice = @items.map(&:price).max
+        @minPrice = @items.map(&:price).min
         @maxVotes = @items.map(&:votes_count).max
+        @minVotes = @items.map(&:votes_count).min
         if params[:search]
           @items = @items.where("price >= ?", params[:search][:price_from])       if params[:search][:price_from]
           @items = @items.where("price <= ?", params[:search][:price_to])         if params[:search][:price_to]
@@ -17,7 +19,7 @@ class ItemsController < ApplicationController
         #@items = Active Record Relation
         @items = @items.order("votes_count DESC", "price")
     end
-    
+
     #/items/1 GET
     def show
         unless @item
