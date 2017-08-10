@@ -38,6 +38,7 @@ gem 'i18n'
 gem 'devise'
 #To make authentification with social networks
 gem 'omniauth', '~> 1.6', '>= 1.6.1'
+gem 'omniauth-facebook'
 #Exception Notification
 gem 'exception_notification'
 gem 'letter_opener', group: :development
