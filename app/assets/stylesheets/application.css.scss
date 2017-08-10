@@ -10,9 +10,9 @@
 
  .dropUnderline :link {text-decoration: none; font-style: italic; font-family: sans-serif; color: #1a1a1a;}
 
- .tableView  {margin: auto; text-align: center; border-collapse: collapse; border: 1px solid black}
+ .tableView  {margin: auto; text-align: center; border-collapse: collapse;}
 
- .thAndtdView th, tr, td {border: 1px solid black; padding: 10px; text-align: center;}
+ .thAndtdView th, tr, td {border: 3px double #999999; padding: 10px; text-align: center;}
 
  .alignCenter { text-align: center;}
 
@@ -33,6 +33,12 @@
  .loginFormInside {margin: 0 auto; width: 65%;}
 
  .marginLeft {margin-left: 5%;}
+
+ .showItem {margin-top: 8%; height: 70%}
+
+ .showImage {float:left; margin-left: 23%;}
+
+ .itemDesc {font-size: 1.4em; margin-top: 5%; margin-right: 17%;}
 
  .footer {position:fixed; bottom: 0%; width: 100%; text-align:center; margin-top:2%}
 

@@ -37,16 +37,17 @@
       <tr class="thAndtdView">
           <td><%= i.id %></td>
           <td>
-            <%= image_tag(i.image_url(:thumb).to_s) %>
+            <%= link_to image_tag(i.image_url(:thumb).to_s), item_path(i) %>
             <h2 class="dropUnderline"><%= link_to i.name, item_path(i) %></h2>
           </td>
           <td><%= i.price %> <%= t("item.price") %></td>
           <td><%= i.created_at.strftime('%Y-%m-%d') %></td>
-          <td><i class="material-icons navbar-text">
-            <%= link_to "delete", item_path(i), method: :delete, data: { confirm: t("item.sure?")} %>
-          </i></td>
-          <td><%= t("item.rating") %> <%= i.votes_count %>, <%= link_to "+",
-          upvote_item_path(i) %></td>
+          <td>
+            <%= link_to '<span class="glyphicon glyphicon-remove"></span> '.html_safe,
+            item_path(i), method: :delete, data: { confirm: t("item.sure?")} %>
+          </td>
+          <td><%= i.votes_count %>, <%= link_to '<span class="glyphicon glyphicon-hand-up"></span> '.html_safe,
+           upvote_item_path(i) %></td>
       </tr>
     <% end %>
   </table>
