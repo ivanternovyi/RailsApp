@@ -20,18 +20,25 @@
              </li>
             <% if user_signed_in? %>
               <li>
-                   <li><%= link_to('<span class="glyphicon glyphicon-cog"></span> '.html_safe + current_user.email,
-                    edit_user_registration_path) %></li>
+                   <%= link_to('<span class="glyphicon glyphicon-list-alt"></span> '.html_safe + "Cart",
+                    cart_path) %>
               </li>
               <li>
-                   <%= link_to('<span class="glyphicon glyphicon-off"></span> Log out'.html_safe, destroy_user_session_path, method: :delete) %>
+                   <%= link_to('<span class="glyphicon glyphicon-cog"></span> '.html_safe + current_user.email,
+                    edit_user_registration_path) %>
+              </li>
+              <li>
+                   <%= link_to('<span class="glyphicon glyphicon-off"></span> Log out'.html_safe,
+                    destroy_user_session_path, method: :delete) %>
               </li>
             <% else %>
               <li>
-                  <%=link_to('<span class="glyphicon glyphicon-log-in"></span> Login'.html_safe, new_user_session_path)%>
+                  <%=link_to('<span class="glyphicon glyphicon-log-in"></span> Login'.html_safe,
+                   new_user_session_path)%>
               </li>
               <li>
-                  <%=link_to('<span class="glyphicon glyphicon-saved"></span> Register'.html_safe, new_user_registration_path)%>
+                  <%=link_to('<span class="glyphicon glyphicon-saved"></span> Register'.html_safe,
+                   new_user_registration_path)%>
               </li>
             <% end %>
        </ul>

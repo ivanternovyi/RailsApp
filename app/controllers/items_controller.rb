@@ -20,6 +20,11 @@ class ItemsController < ApplicationController
         end
     end
 
+    def add_to_cart
+      
+      redirect_to action: :index
+    end
+
     #/items/1 GET
     def show
         unless @item

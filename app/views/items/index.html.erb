@@ -32,6 +32,7 @@
         <th><%= t("item.created?") %></th>
         <th><%= t("item.remove?") %></th>
         <th><%= t("item.rating") %> </th>
+        <th>Add to cart?</th>
     </tr>
     <% @items.each do |i| %>
       <tr class="thAndtdView">
@@ -46,8 +47,13 @@
             <%= link_to '<span class="glyphicon glyphicon-remove"></span> '.html_safe,
             item_path(i), method: :delete, data: { confirm: t("item.sure?")} %>
           </td>
-          <td><%= i.votes_count %>, <%= link_to '<span class="glyphicon glyphicon-hand-up"></span> '.html_safe,
-           upvote_item_path(i) %></td>
+          <td>
+            <%= i.votes_count %>, <%= link_to '<span class="glyphicon glyphicon-hand-up"></span> '.html_safe,
+             upvote_item_path(i) %>
+          </td>
+          <td>
+            <%= link_to '<span class="glyphicon glyphicon-plus"></span> '.html_safe, add_to_cart_item_path(i) %>
+          </td>
       </tr>
     <% end %>
   </table>
