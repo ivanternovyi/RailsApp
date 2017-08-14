@@ -14,7 +14,9 @@ Rails.application.routes.draw do
 
     get 'admin/users_count' => 'admin#users_count'
 
-    get 'cart' => 'cart#index'
+    resources :cart, only: :index do
+      get :remove_item, on: :member
+    end
 
     root to: 'items#index'
 

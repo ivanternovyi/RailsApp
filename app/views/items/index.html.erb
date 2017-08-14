@@ -18,7 +18,7 @@
                 input_html: {min: @minVotes, max: @maxVotes, step: '1', value: @maxVotes } %>
     <p><%= f.submit "Find"%></p>
   <% end %>
-</div>
+</div> 
 
 <div class="createItemBtn">
   <a href="/<%=I18n.locale%>/items/new"><button type="button" class="btn btn-default">Create Item</button></a>
@@ -32,7 +32,7 @@
         <th><%= t("item.created?") %></th>
         <th><%= t("item.remove?") %></th>
         <th><%= t("item.rating") %> </th>
-        <th>Add to cart?</th>
+        <%= '<th>Add to cart?</th>'.html_safe if current_user%>
     </tr>
     <% @items.each do |i| %>
       <tr class="thAndtdView">
@@ -51,18 +51,20 @@
             <%= i.votes_count %>, <%= link_to '<span class="glyphicon glyphicon-hand-up"></span> '.html_safe,
              upvote_item_path(i) %>
           </td>
-          <td>
-            <%= link_to '<span class="glyphicon glyphicon-plus"></span> '.html_safe, add_to_cart_item_path(i) %>
-          </td>
+          <% if current_user %>
+            <td>
+              <%= link_to '<span class="glyphicon glyphicon-plus"></span> '.html_safe, add_to_cart_item_path(i) %>
+            </td>
+          <% end %>
       </tr>
     <% end %>
   </table>
 
   <div class="apple_pagination">
     <div class="page_info">
-      <%= page_entries_info @tasks %>
+      <%= page_entries_info @items %>
     </div>
-    <%= will_paginate @tasks, :container => false %>
+    <%= will_paginate @items, :container => false %>
   </div>
 
 <% end %>

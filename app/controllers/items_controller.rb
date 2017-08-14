@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-    before_action :find_item,      only: [:show, :edit, :update, :destroy, :upvote]
+    before_action :find_item,      only: [:show, :edit, :update, :destroy, :upvote, :add_to_cart]
     before_action :check_if_admin, only: [:edit, :update, :new, :create, :destroy]
 
     def index
@@ -18,11 +18,6 @@ class ItemsController < ApplicationController
           @items = @items.where("votes_count >= ?", params[:search][:votes_from]) if params[:search][:votes_from]
           @items = @items.where("votes_count <= ?", params[:search][:votes_to])   if params[:search][:votes_to]
         end
-    end
-
-    def add_to_cart
-      
-      redirect_to action: :index
     end
 
     #/items/1 GET
@@ -73,6 +68,11 @@ class ItemsController < ApplicationController
     def upvote
         @item.increment!(:votes_count)
         redirect_to action: :index
+    end
+
+    def add_to_cart
+      @cart.add_item(@item, 1)
+      redirect_to action: :index
     end
 
     private

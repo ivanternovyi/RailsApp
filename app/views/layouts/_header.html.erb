@@ -20,8 +20,8 @@
              </li>
             <% if user_signed_in? %>
               <li>
-                   <%= link_to('<span class="glyphicon glyphicon-list-alt"></span> '.html_safe + "Cart",
-                    cart_path) %>
+                   <%= link_to('<span class="glyphicon glyphicon-shopping-cart"></span> '.html_safe + "Cart",
+                    cart_index_path) %>
               </li>
               <li>
                    <%= link_to('<span class="glyphicon glyphicon-cog"></span> '.html_safe + current_user.email,
