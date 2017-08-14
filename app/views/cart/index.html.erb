@@ -1,7 +1,8 @@
 <% if @cart.items.empty? %>
   <h3 class="emptyCart"> Your cart is empty..<br/> Go <%= link_to "back", items_path %>? </h3>
 <% else %>
-  <table class="tableView">
+  <div class="divCart">
+    <table class="tableView">
 
     <tr class="thAndtdView">
       <th>Item id</th>
@@ -44,6 +45,9 @@
       </tr>
 
 
-  </table>
-  <div class="alignCenter"><a href="/<%=I18n.locale%>/cart"><button type="button" class="btn btn-success">Buy it!</button></a></div>
+    </table>
+    <div class="alignCenter"><a href="/<%=I18n.locale%>/cart">
+      <button type="button" class="btn btn-success">Buy it!</button></a>
+    </div>
+  </div>
 <% end %>

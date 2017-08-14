@@ -18,6 +18,11 @@ class ItemsController < ApplicationController
           @items = @items.where("votes_count >= ?", params[:search][:votes_from]) if params[:search][:votes_from]
           @items = @items.where("votes_count <= ?", params[:search][:votes_to])   if params[:search][:votes_to]
         end
+        if params[:find_item]
+          @items = @items.where("name == ?", params[:find_item][:name_param])     if params[:find_item][:name_param]
+        else
+          @items
+        end
     end
 
     #/items/1 GET
