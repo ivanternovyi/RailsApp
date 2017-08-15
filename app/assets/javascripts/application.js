@@ -14,3 +14,23 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//jQuery(function($) {
+
+  //$(".deleteAction").click( function() {
+    //  var current_item_tr = $(this).parents('tr')[0];
+      //if(confirm("Are you sure?")) {
+        //$.ajax({
+        //  url: '/' + $(current_item_tr).attr('data-item_id'),
+        //  type: 'POST',
+        //  data: { _method: 'DELETE'},
+        //  success: function(){
+        //    $(current_item_tr).fadeOut(200);
+        //  }
+        //});
+      //}
+    //});
+
+//});
+
+
+// put in <tr data-item_id="<%= i.id %>">

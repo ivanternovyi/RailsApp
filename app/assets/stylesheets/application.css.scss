@@ -1,3 +1,8 @@
+/*
+*= require_self
+*= require_tree .
+*/
+
   @import "bootstrap";
   @import "bootstrap-sprockets";
 
@@ -6,73 +11,17 @@
  .flashDiv {margin: auto; text-align: center; margin-top:1%; width: 20%; padding: 10px;
     background-color: #eaeae1; border: 3px solid #cbcbb4;}
 
- .signInOutForm {text-align: center; width:17%; border: 3px solid #73AD21; padding: 5px; margin:2%; margin-top: 4%}
-
- .dropUnderline :link {text-decoration: none; font-style: italic; font-family: sans-serif; color: #1a1a1a;}
-
  .tableView  {margin: auto; text-align: center; border-collapse: collapse;}
 
  .thAndtdView th, tr, td {border: 3px double #999999; padding: 10px; text-align: center;}
 
  .alignCenter { text-align: center;}
 
- .pointPosition {position: fixed; bottom: 6%; right: 5%; opacity: 0.8;}
-
  .backgroundLayout { background: -webkit-linear-gradient(left, rgba(226,226,226,1) 0%,
     rgba(254,254,254,1) 29%, rgba(254,254,254,1) 73%, rgba(209,209,209,1) 100%);}
 
  .loginForm {margin: auto; margin-top:4%; width: 30%; text-align: center; padding: 3%; padding-top: 2%; }
 
- .userInfo { margin: auto; text-align: center; margin-top:2%; width: 30%; border: 3px solid #73AD21; padding: 10px;}
-
- .remDivUser {margin: auto; background-color:#e6e6ff; text-align: center; margin-top:2%; width: 70%;
-   border: 3px solid #cc0000;}
-
- .newItemForm {margin-left: 2%; margin-right: 78%}
-
- .loginFormInside {margin: 0 auto; width: 65%;}
-
  .marginLeft {margin-left: 5%;}
 
- .showItem {margin-top: 8%; height: 70%}
-
- .showImage {float:left; margin-left: 23%;}
-
- .itemDesc {font-size: 1.4em; margin-top: 5%; margin-right: 17%;}
-
  .footer {position:fixed; bottom: 0%; width: 100%; text-align:center; margin-top:2%}
-
- .filterForm {position: fixed; top: 16%; right: 80%; left: 3%; width: 15%; padding:9px;}
-
- .createItemBtn {position: absolute; top: 13%; right: 5%; left: 87.5%;  padding:9px;}
-
- .emptyCart {text-align: center; margin-top: 10%;}
-
- .divCart {margin-bottom:6%}
-
- .apple_pagination {
-  text-align: center;
-  padding: 1em;
-  margin-bottom: 3%;
-  cursor: default; }
-  .apple_pagination a, .apple_pagination span {
-    padding: 0.2em 0.3em; }
-  .apple_pagination .disabled {
-    color: #aaaaaa; }
-  .apple_pagination .current {
-    font-style: normal;
-    font-weight: bold;
-    background-color: #bebebe;
-    display: inline-block;
-    width: 1.4em;
-    height: 1.4em;
-    line-height: 1.5;
-    -moz-border-radius: 1em;
-    -webkit-border-radius: 1em;
-    border-radius: 1em;
-    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
-  .apple_pagination a {
-    text-decoration: none;
-    color: black; }
-    .apple_pagination a:hover, .apple_pagination a:focus {
-      text-decoration: underline; }
