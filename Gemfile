@@ -20,6 +20,8 @@ gem 'uglifier'
 gem 'coffee-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+#to send email
+gem 'sendmail', '~> 0.0.1'
 #to upload images
 gem 'carrierwave'
 # For different versions of an image
