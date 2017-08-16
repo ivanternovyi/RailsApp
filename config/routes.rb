@@ -12,8 +12,6 @@ Rails.application.routes.draw do
       #get :expensive, on: :collection
     end
 
-    get 'admin/users_count' => 'admin#users_count'
-
     resources :cart, only: :index do
       get :remove_item, on: :member
     end
