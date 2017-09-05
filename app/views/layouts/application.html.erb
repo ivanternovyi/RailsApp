@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyStore</title>
+    <%= favicon_link_tag '/favicon.ico' %>
+    <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="backgroundLayout">
+
+    <%= render "layouts/header" %>
+
+    <div>
+      <% flash.each do |key, value| %>
+        <h4><div  class="flashDiv" class="alert alert-<%= key %>"><%= value %></div></h4>
+      <% end %>
+    </div>
+
+    <%= yield %>
+
+    <%= render "layouts/footer" %>
+
+  </body>
+</html>

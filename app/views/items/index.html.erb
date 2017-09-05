@@ -1,0 +1,74 @@
+<h1 class="alignCenter" id="top"><%= t('item.heading')%></h1>
+
+<% if @items.empty? %>
+
+    <p class="alignCenter"> No items </p>
+
+<% else %>
+
+<div class="filterForm">
+  <%= simple_form_for :search, :method => :get do |f| %>
+      <%= f.input :price_from, as: :range, required: false,
+                input_html: {min: @minPrice, max: @maxPrice, step: '1', value: @minPrice }%>
+      <%= f.input :price_to, as: :range, required: false,
+                input_html: {min: @minPrice, max: @maxPrice, step: '1', value: @maxPrice } %>
+      <%= f.input :votes_from, as: :range, required: false,
+                input_html: {min: @minVotes, max: @maxVotes, step: '1', value: @minVotes } %>
+      <%= f.input :votes_to, as: :range, required: false,
+                input_html: {min: @minVotes, max: @maxVotes, step: '1', value: @maxVotes } %>
+    <p><%= f.submit "Find"%></p>
+  <% end %>
+</div>
+
+<div class="createItemBtn">
+  <a href="/<%=I18n.locale%>/items/new"><button type="button" class="btn btn-success">Create Item</button></a>
+</div>
+
+  <table class="tableView">
+    <tr class="thAndtdView">
+        <th> Id </th>
+        <th><%= t("activerecord.attributes.item.name") %></th>
+        <th><%= t("activerecord.attributes.item.price") %></th>
+        <th><%= t("item.created?") %></th>
+        <th><%= t("item.remove?") %></th>
+        <th><%= t("item.rating") %> </th>
+        <%= '<th>Add to cart?</th>'.html_safe if current_user%>
+    </tr>
+    <% @items.each do |i| %>
+      <tr class="thAndtdView">
+          <td><%= i.id %></td>
+          <td>
+            <%= link_to image_tag(i.image_url(:thumb).to_s), item_path(i) %>
+            <h2 class="dropUnderline"><%= link_to i.name, item_path(i) %></h2>
+          </td>
+          <td><%= i.price %> <%= t("item.price") %></td>
+          <td><%= i.created_at.strftime('%Y-%m-%d') %></td>
+          <td>
+            <%= link_to '<span class="glyphicon glyphicon-remove"></span> '.html_safe,
+            item_path(i), method: :delete, data: { confirm: t("item.sure?")} %>
+          </td>
+          <td>
+            <%= i.votes_count %>, <%= link_to '<span class="glyphicon glyphicon-hand-up"></span> '.html_safe,
+             upvote_item_path(i) %>
+          </td>
+          <% if current_user %>
+            <td>
+              <%= link_to '<span class="glyphicon glyphicon-plus"></span> '.html_safe, add_to_cart_item_path(i) %>
+            </td>
+          <% end %>
+      </tr>
+    <% end %>
+  </table>
+
+  <div class="apple_pagination">
+    <div class="page_info">
+      <%= page_entries_info @items %>
+    </div>
+    <%= will_paginate @items, :container => false %>
+  </div>
+
+<% end %>
+
+<a href="#" class="pointPosition">
+  <%= image_tag("/top.png", height: '90', width: '90') %>
+</a>

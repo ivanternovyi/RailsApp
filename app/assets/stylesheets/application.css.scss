@@ -1,0 +1,27 @@
+/*
+*= require_self
+*= require_tree .
+*/
+
+  @import "bootstrap";
+  @import "bootstrap-sprockets";
+
+  input[type=submit] { @extend .btn; @extend .btn-success;}
+
+ .flashDiv {margin: auto; text-align: center; margin-top:1%; width: 20%; padding: 10px;
+    background-color: #eaeae1; border: 3px solid #cbcbb4;}
+
+ .tableView  {margin: auto; text-align: center; border-collapse: collapse;}
+
+ .thAndtdView th, tr, td {border: 3px double #999999; padding: 10px; text-align: center;}
+
+ .alignCenter { text-align: center;}
+
+ .backgroundLayout { background: -webkit-linear-gradient(left, rgba(226,226,226,1) 0%,
+    rgba(254,254,254,1) 29%, rgba(254,254,254,1) 73%, rgba(209,209,209,1) 100%);}
+
+ .loginForm {margin: auto; margin-top:4%; width: 30%; text-align: center; padding: 3%; padding-top: 2%; }
+
+ .marginLeft {margin-left: 5%;}
+
+ .footer {position:fixed; bottom: 0%; width: 100%; text-align:center; margin-top:2%}
