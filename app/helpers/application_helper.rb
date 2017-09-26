@@ -11,4 +11,10 @@ module ApplicationHelper
     s.html_safe
   end
 
+  def user_admin?
+    if current_user
+      current_user.admin
+    end
+  end
+
 end

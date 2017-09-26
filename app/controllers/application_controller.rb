@@ -32,6 +32,6 @@ class ApplicationController < ActionController::Base
     end
 
     def check_if_admin
-  #       render_403 unless params[:admin]
+         render_403 unless current_user && current_user.admin
     end
 end

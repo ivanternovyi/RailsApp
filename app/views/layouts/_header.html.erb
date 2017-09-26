@@ -18,6 +18,10 @@
 
     <% end %>
 
+    <div class="navbar-text adminSign">
+      <strong><%= link_to("Super User", admin_path) if user_admin?%></strong>
+    </div>
+
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
              <li class="navbar-text">

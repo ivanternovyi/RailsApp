@@ -30,7 +30,10 @@
         <th><%= t("activerecord.attributes.item.name") %></th>
         <th><%= t("activerecord.attributes.item.price") %></th>
         <th><%= t("item.created?") %></th>
-        <th><%= t("item.remove?") %></th>
+        <th><%= t("item.updated?") %></th>
+        <% if user_admin? %>
+          <th><%= t("item.remove?") %></th>
+        <% end %>
         <th><%= t("item.rating") %> </th>
         <%= '<th>Add to cart?</th>'.html_safe if current_user%>
     </tr>
@@ -43,13 +46,16 @@
           </td>
           <td><%= i.price %> <%= t("item.price") %></td>
           <td><%= i.created_at.strftime('%Y-%m-%d') %></td>
+          <td><%= i.updated_at.strftime('%Y-%m-%d') %></td>
+          <% if user_admin? %>
+            <td>
+              <%= link_to '<span class="glyphicon glyphicon-remove"></span> '.html_safe,
+              item_path(i), method: :delete, data: { confirm: t("item.sure?")} %>
+            </td>
+          <% end %>
           <td>
-            <%= link_to '<span class="glyphicon glyphicon-remove"></span> '.html_safe,
-            item_path(i), method: :delete, data: { confirm: t("item.sure?")} %>
-          </td>
-          <td>
-            <%= i.votes_count %>, <%= link_to '<span class="glyphicon glyphicon-hand-up"></span> '.html_safe,
-             upvote_item_path(i) %>
+            <%= i.votes_count %> <%= link_to '<span class="glyphicon glyphicon-hand-up"></span> '.html_safe,
+             upvote_item_path(i) if current_user %>
           </td>
           <% if current_user %>
             <td>

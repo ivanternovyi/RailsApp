@@ -1,0 +1,68 @@
+<div class="alignCenter">
+  <h1>Users</h1>
+  <table class="tableView">
+    <tr class="thAndtdView">
+        <th> Id </th>
+        <th> Email </th>
+        <th> Date of creation </th>
+        <th> Last update </th>
+        <th> Facebook </th>
+        <th> Role </th>
+    </tr>
+    <% @users.each do |u| %>
+      <tr class="thAndtdView">
+          <td><%= u.id %></td>
+          <td><%= u.email %></td>
+          <td><%= u.created_at.strftime('%Y-%m-%d') %></td>
+          <td><%= u.updated_at.strftime('%Y-%m-%d') %></td>
+          <td><%= u.uid %></td>
+          <td>
+              <% if u.admin %>
+                 Admin
+              <% else %>
+                 Customer
+              <% end %>
+          </td>
+      </tr>
+    <% end %>
+  </table>
+  <h1>Items</h1>
+  <table class="tableView infoView">
+    <tr class="thAndtdView">
+        <th> Id </th>
+        <th><%= t("activerecord.attributes.item.name") %></th>
+        <th><%= t("activerecord.attributes.item.price") %></th>
+        <th><%= t("activerecord.attributes.item.weight") %></th>
+        <th><%= t("item.created?") %></th>
+        <th><%= t("item.updated?") %></th>
+        <th><%= t("item.remove?") %></th>
+        <th><%= t("item.rating") %> </th>
+        <%= '<th>Add to cart?</th>'.html_safe%>
+    </tr>
+    <% @items.each do |i| %>
+      <tr class="thAndtdView">
+          <td><%= i.id %></td>
+          <td>
+            <%= link_to image_tag(i.image_url(:thumb).to_s), item_path(i) %>
+            <h2 class="dropUnderline"><%= link_to i.name, item_path(i) %></h2>
+          </td>
+          <td><%= i.price %> <%= t("item.price") %></td>
+          <td><%= i.weight %> <%= t("item.weight") %></td>
+          <td><%= i.created_at.strftime('%Y-%m-%d') %></td>
+          <td><%= i.updated_at.strftime('%Y-%m-%d') %></td>
+          <td>
+              <%= link_to '<span class="glyphicon glyphicon-remove"></span> '.html_safe,
+              item_path(i), method: :delete, data: { confirm: t("item.sure?")} %>
+          </td>
+          <td> <%= i.votes_count %> </td>
+          <td>
+               <%= link_to '<span class="glyphicon glyphicon-plus"></span> '.html_safe, add_to_cart_item_path(i) %>
+          </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<a href="#" class="pointPosition">
+  <%= image_tag("/top.png", height: '90', width: '90') %>
+</a>

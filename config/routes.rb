@@ -16,6 +16,8 @@ Rails.application.routes.draw do
       get :remove_item, on: :member
     end
 
+    get 'admin', to: 'admin#info'
+
     root to: 'items#index'
 
     get '*path' => redirect('/404')

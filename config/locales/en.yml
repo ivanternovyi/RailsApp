@@ -31,6 +31,7 @@ en:
     heading: 'Items'
     sure?: 'Are you sure to delete?'
     created?: 'Date of creation'
+    updated?: 'Last update'
     remove?: 'Remove?'
     rating: 'Rating'
     showExpensive: 'Show expensive items'
