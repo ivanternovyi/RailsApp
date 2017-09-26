@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
     before_action :find_item,      only: [:show, :edit, :update, :destroy, :upvote, :add_to_cart]
-    before_action :check_if_admin, only: [:edit, :update, :new, :create, :destroy]
+    before_action :check_if_admin, only: [:destroy]
 
     def index
         @items = Item.all
