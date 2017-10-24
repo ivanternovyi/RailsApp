@@ -53,6 +53,7 @@ gem 'jquery-rails'
 group :test do
    gem 'rspec-rails'
    gem 'factory_girl_rails'
+   gem 'rails-controller-testing'
 end
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks'

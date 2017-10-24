@@ -13747,3 +13747,1235 @@ Completed 200 OK in 134ms (Views: 107.9ms | ActiveRecord: 14.8ms)
 Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-09-26 18:40:12 +0300
 Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-09-26 18:40:12 +0300
 Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-09-26 18:40:12 +0300
+Started GET "/en" for 127.0.0.1 at 2017-09-26 19:30:22 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-09-26 16:30:22.081117"], ["updated_at", "2017-09-26 16:30:22.081117"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (93.9ms)
+  Rendered layouts/_header.html.erb (5.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 2029ms (Views: 1953.4ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-09-26 19:30:24 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-09-26 19:30:24 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-09-26 19:30:24 +0300
+Started GET "/en/" for 127.0.0.1 at 2017-09-26 19:31:25 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 293], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (41.9ms)
+  Rendered layouts/_header.html.erb (5.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 100ms (Views: 92.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_in?locale=en" for 127.0.0.1 at 2017-09-26 19:31:59 +0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 293], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 59.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/en/" for 127.0.0.1 at 2017-09-26 19:32:02 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 293], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (47.9ms)
+  Rendered layouts/_header.html.erb (4.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 102ms (Views: 94.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/sign_in?locale=en" for 127.0.0.1 at 2017-09-26 19:32:04 +0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 293], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (5.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (29.4ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 86ms (Views: 83.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/sign_in?locale=en" for 127.0.0.1 at 2017-09-26 19:32:10 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GyGK0V9LDxJl2B7n55vBQvkDXPLXRnppL6nwGzprHHGxd3QAWvILbVI4u0BhepoRpLYaf2sCCcnJFX8ey/7ijA==", "user"=>{"email"=>"superuser@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 293], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "superuser@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-09-26 16:32:10.381093"], ["last_sign_in_at", "2017-09-26 15:39:42.366327"], ["sign_in_count", 9], ["updated_at", "2017-09-26 16:32:10.382580"], ["id", 4]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/en
+Completed 302 Found in 223ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-09-26 19:32:10 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 293], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (29.0ms)
+  Rendered layouts/_header.html.erb (7.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 106ms (Views: 98.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-09-26 19:32:10 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-09-26 19:32:10 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-09-26 19:32:10 +0300
+Started GET "/en/admin" for 127.0.0.1 at 2017-09-26 19:32:15 +0300
+Processing by AdminController#info as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 293], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering admin/info.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."email" ASC[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."name" ASC[0m
+  Rendered admin/info.html.erb within layouts/application (24.8ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 85ms (Views: 79.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-10-24 16:19:18 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-10-24 13:19:18.817405"], ["updated_at", "2017-10-24 13:19:18.817405"]]
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (80.3ms)
+  Rendered layouts/_header.html.erb (11.5ms)
+  Rendered layouts/_footer.html.erb (3.1ms)
+Completed 200 OK in 767ms (Views: 696.3ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-10-24 16:19:20 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-10-24 16:19:20 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-10-24 16:19:20 +0300
+Started GET "/" for 127.0.0.1 at 2017-10-24 16:19:22 +0300
+Processing by ItemsController#index as HTML
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (32.2ms)
+  Rendered layouts/_header.html.erb (8.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 102ms (Views: 93.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-10-24 16:19:22 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-10-24 16:19:22 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-10-24 16:19:22 +0300
+Started GET "/en/items/17" for 127.0.0.1 at 2017-10-24 16:19:35 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"17"}
+  [1m[36mCart Load (0.7ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."id" ASC LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 79ms (Views: 68.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/en/" for 127.0.0.1 at 2017-10-24 16:19:38 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (35.0ms)
+  Rendered layouts/_header.html.erb (6.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 109ms (Views: 104.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/sign_in?locale=en" for 127.0.0.1 at 2017-10-24 16:19:40 +0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.0ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 96ms (Views: 68.9ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/sign_in?locale=en" for 127.0.0.1 at 2017-10-24 16:19:55 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"57rO81ieq5t1v4lqHkLEDTWjHPhHmOKJP8ZmnFXU10DfJ8T06ND4UZ50/3UEDJmqQW7VbFFMuNubcJLXcjVu5g==", "user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "locale"=>"en"}
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 7ms (ActiveRecord: 1.0ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"57rO81ieq5t1v4lqHkLEDTWjHPhHmOKJP8ZmnFXU10DfJ8T06ND4UZ50/3UEDJmqQW7VbFFMuNubcJLXcjVu5g==", "user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "locale"=>"en"}
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 255ms (Views: 59.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-10-24 16:19:56 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-10-24 16:19:56 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-10-24 16:19:56 +0300
+Started POST "/users/sign_in?locale=en" for 127.0.0.1 at 2017-10-24 16:20:05 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MXqambjb8XoJwqd/W4PUN8DB0PdEKpJLrIsOQAJhqssproYocJDnvhK2I1EerspZv4/EqSEg0p+lg/iJ/f6cxQ==", "user"=>{"email"=>"ivanternovyi@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ivanternovyi@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 192ms (ActiveRecord: 0.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MXqambjb8XoJwqd/W4PUN8DB0PdEKpJLrIsOQAJhqssproYocJDnvhK2I1EerspZv4/EqSEg0p+lg/iJ/f6cxQ==", "user"=>{"email"=>"ivanternovyi@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "locale"=>"en"}
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 244ms (Views: 58.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-10-24 16:20:06 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-10-24 16:20:06 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-10-24 16:20:06 +0300
+Started POST "/users/sign_in?locale=en" for 127.0.0.1 at 2017-10-24 16:20:11 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6bUX8fnI6MjT3GH72+GFdDcFZgRhRi+QeodEEwsbCCzxYQtAMYP+DMio5dWezJsaSEtyWgRMb0Rzj7La9IQ+Ig==", "user"=>{"email"=>"ivanternovyi@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ivanternovyi@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 189ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6bUX8fnI6MjT3GH72+GFdDcFZgRhRi+QeodEEwsbCCzxYQtAMYP+DMio5dWezJsaSEtyWgRMb0Rzj7La9IQ+Ig==", "user"=>{"email"=>"ivanternovyi@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "locale"=>"en"}
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 239ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-10-24 16:20:12 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-10-24 16:20:12 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-10-24 16:20:12 +0300
+Started GET "/users/password/new?locale=en" for 127.0.0.1 at 2017-10-24 16:20:14 +0300
+Processing by Devise::PasswordsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.8ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/password?locale=en" for 127.0.0.1 at 2017-10-24 16:20:20 +0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Q9NsGhYt3etljIpX8q47hvHomxw3r8O/FpbiwzvDSJGVE4/xOfiroiagkS4Zt1YH8rIBQBRn43ZvFiMVV8paSw==", "user"=>{"email"=>"ivanternovyi@gmail.com"}, "commit"=>"Send me reset password instructions", "locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ivanternovyi@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "100273662804b402f917a24e03e49039d3782be0a46be0006b1834b01fd898fe"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "100273662804b402f917a24e03e49039d3782be0a46be0006b1834b01fd898fe"], ["reset_password_sent_at", "2017-10-24 13:20:20.763696"], ["updated_at", "2017-10-24 13:20:20.764574"], ["id", 1]]
+  [1m[35m (13.3ms)[0m  [1m[36mcommit transaction[0m
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (1.0ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 168.9ms
+Sent mail to ivanternovyi@gmail.com (9.2ms)
+Date: Tue, 24 Oct 2017 16:20:21 +0300
+From: info@mystore.com
+Reply-To: info@mystore.com
+To: ivanternovyi@gmail.com
+Message-ID: <59ef3e1521fac_5be23fe8e408fa9088651@Vostro.mail>
+Subject: Reset password instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Hello ivanternovyi@gmail.com!</p>
+
+<p>Someone has requested a link to change your password. You can do this through the link below.</p>
+
+<p><a href="http://localhost:3000/users/password/edit?reset_password_token=i-TxugCw8WXYbqyJaqoP">Change my password</a></p>
+
+<p>If you didn't request this, please ignore this email.</p>
+<p>Your password won't change until you access the link above and create a new one.</p>
+
+Completed 500 Internal Server Error in 649ms (ActiveRecord: 14.7ms)
+
+
+  Rendering /home/ivan/.rvm/gems/ruby-2.3.3/gems/exception_notification-4.2.1/lib/exception_notifier/views/exception_notifier/exception_notification.text.erb
+  Rendered /home/ivan/.rvm/gems/ruby-2.3.3/gems/exception_notification-4.2.1/lib/exception_notifier/views/exception_notifier/_request.text.erb (1.7ms)
+  Rendered /home/ivan/.rvm/gems/ruby-2.3.3/gems/exception_notification-4.2.1/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.8ms)
+  Rendered /home/ivan/.rvm/gems/ruby-2.3.3/gems/exception_notification-4.2.1/lib/exception_notifier/views/exception_notifier/_session.text.erb (0.9ms)
+  Rendered /home/ivan/.rvm/gems/ruby-2.3.3/gems/exception_notification-4.2.1/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.1ms)
+  Rendered /home/ivan/.rvm/gems/ruby-2.3.3/gems/exception_notification-4.2.1/lib/exception_notifier/views/exception_notifier/_environment.text.erb (2.5ms)
+  Rendered /home/ivan/.rvm/gems/ruby-2.3.3/gems/exception_notification-4.2.1/lib/exception_notifier/views/exception_notifier/_title.text.erb (0.1ms)
+  Rendered /home/ivan/.rvm/gems/ruby-2.3.3/gems/exception_notification-4.2.1/lib/exception_notifier/views/exception_notifier/_backtrace.text.erb (0.5ms)
+  Rendered /home/ivan/.rvm/gems/ruby-2.3.3/gems/exception_notification-4.2.1/lib/exception_notifier/views/exception_notifier/exception_notification.text.erb (22.1ms)
+#exception_notification: processed outbound mail in 28.2ms
+Sent mail to ivanternovyi@gmail.com (6.2ms)
+Date: Tue, 24 Oct 2017 16:20:21 +0300
+From: error500@mystore.com
+To: ivanternovyi@gmail.com
+Message-ID: <59ef3e152d41d_5be23fe8e408fa90887ed@Vostro.mail>
+Subject: [ERROR] passwords#create (Errno::ECONNREFUSED) "Connection refused -
+ connect(2) for \"localhost\" port 25"
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+An Errno::ECONNREFUSED occurred in passwords#create:
+
+  Connection refused - connect(2) for "localhost" port 25
+  =
+
+
+
+-------------------------------
+Request:
+-------------------------------
+
+  * URL        : http://localhost:3000/users/password?locale=3Den
+  * HTTP Method: POST
+  * IP address : 127.0.0.1
+  * Parameters : {"utf8"=3D>"=E2=9C=93", "authenticity_token"=3D>"Q9NsGhY=
+t3etljIpX8q47hvHomxw3r8O/FpbiwzvDSJGVE4/xOfiroiagkS4Zt1YH8rIBQBRn43ZvFiMV=
+V8paSw=3D=3D", "user"=3D>{"email"=3D>"ivanternovyi@gmail.com"}, "commit"=3D=
+>"Send me reset password instructions", "locale"=3D>"en", "controller"=3D=
+>"devise/passwords", "action"=3D>"create"}
+  * Timestamp  : 2017-10-24 13:20:21 UTC
+  * Server : Vostro
+  * Rails root : /home/ivan/Desktop/RailsApp
+  * Process: 23522
+
+-------------------------------
+Session:
+-------------------------------
+
+  * session id: "e327f6054312bc68affd45327748d666"
+  * data: {"session_id"=3D>"e327f6054312bc68affd45327748d666",
+   "cart_id"=3D>294,
+   "_csrf_token"=3D>"GNQcschLFsQbdIQuRS0ebn9OFF5lCkDUCQj2yf+fNg4=3D"}
+
+-------------------------------
+Environment:
+-------------------------------
+
+  * CONTENT_LENGTH                                 : 214
+  * CONTENT_TYPE                                   : application/x-www-fo=
+rm-urlencoded
+  * GATEWAY_INTERFACE                              : CGI/1.2
+  * HTTP_ACCEPT                                    : text/html,applicatio=
+n/xhtml+xml,application/xml;q=3D0.9,image/webp,image/apng,*/*;q=3D0.8
+  * HTTP_ACCEPT_ENCODING                           : gzip, deflate, br
+  * HTTP_ACCEPT_LANGUAGE                           : uk-UA,uk;q=3D0.8,ru;=
+q=3D0.6,en-US;q=3D0.4,en;q=3D0.2
+  * HTTP_CACHE_CONTROL                             : max-age=3D0
+  * HTTP_CONNECTION                                : keep-alive
+  * HTTP_COOKIE                                    : _my_store_session=3D=
+WW13TVhmcEV5a3VMa2szWEF3ZjR6MDBTeUR1ZXlNMnFYbFhYMzBBcUpFNmFPazZ2VnNWbUdMZ=
+ThuTEVXdTQ5ckNIWjlQR3Exd05EaUZxcklhUjZzZmlMRHZwZjBubWx4RUdsLzN6YlpzUHVHNi=
+tacDRqdFlxMWtBbTNJUWpNVnN4SEZuV3g3cGRwbWhocmhSWXhEUEVoa3pSbVB6ZlhTRitjQll=
+CTFY5dFA4PS0tZXZJMitBb2lvb3lMc1ovRDdkWm1NQT09--d1e7f57a625be2e435c964eccc=
+b89d260ae3bd06
+  * HTTP_HOST                                      : localhost:3000
+  * HTTP_ORIGIN                                    : http://localhost:300=
+0
+  * HTTP_REFERER                                   : http://localhost:300=
+0/users/password/new?locale=3Den
+  * HTTP_UPGRADE_INSECURE_REQUESTS                 : 1
+  * HTTP_USER_AGENT                                : Mozilla/5.0 (X11; Li=
+nux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/60.0.3=
+112.113 Chrome/60.0.3112.113 Safari/537.36
+  * HTTP_VERSION                                   : HTTP/1.1
+  * ORIGINAL_FULLPATH                              : /users/password?loca=
+le=3Den
+  * ORIGINAL_SCRIPT_NAME                           : =
+
+  * PATH_INFO                                      : /users/password
+  * QUERY_STRING                                   : locale=3Den
+  * REMOTE_ADDR                                    : 127.0.0.1
+  * REQUEST_METHOD                                 : POST
+  * REQUEST_PATH                                   : /users/password
+  * REQUEST_URI                                    : /users/password?loca=
+le=3Den
+  * ROUTES_36525740_SCRIPT_NAME                    : =
+
+  * SCRIPT_NAME                                    : =
+
+  * SERVER_NAME                                    : localhost
+  * SERVER_PORT                                    : 3000
+  * SERVER_PROTOCOL                                : HTTP/1.1
+  * SERVER_SOFTWARE                                : puma 3.9.1 Private C=
+aller
+  * action_controller.instance                     : #<Devise::PasswordsC=
+ontroller:0x007fd1b020b528>
+  * action_dispatch.backtrace_cleaner              : #<Rails::BacktraceCl=
+eaner:0x007fd1c8108ca8>
+  * action_dispatch.cookies                        : #<ActionDispatch::Co=
+okies::CookieJar:0x007fd1ac517248>
+  * action_dispatch.cookies_digest                 : =
+
+  * action_dispatch.cookies_serializer             : json
+  * action_dispatch.encrypted_cookie_salt          : encrypted cookie
+  * action_dispatch.encrypted_signed_cookie_salt   : signed encrypted coo=
+kie
+  * action_dispatch.http_auth_salt                 : http authentication
+  * action_dispatch.key_generator                  : #<ActiveSupport::Cac=
+hingKeyGenerator:0x000000066ee0f0>
+  * action_dispatch.logger                         : #<ActiveSupport::Log=
+ger:0x000000044d2a98>
+  * action_dispatch.parameter_filter               : [:password]
+  * action_dispatch.redirect_filter                : []
+  * action_dispatch.remote_ip                      : 127.0.0.1
+  * action_dispatch.request.content_type           : application/x-www-fo=
+rm-urlencoded
+  * action_dispatch.request.formats                : [#<Mime::Type:0x0000=
+00043c4bb0 @synonyms=3D["application/xhtml+xml"], @symbol=3D:html, @strin=
+g=3D"text/html", @hash=3D-739948912742166364>]
+  * action_dispatch.request.parameters             : {"utf8"=3D>"=E2=9C=93=
+", "authenticity_token"=3D>"Q9NsGhYt3etljIpX8q47hvHomxw3r8O/FpbiwzvDSJGVE=
+4/xOfiroiagkS4Zt1YH8rIBQBRn43ZvFiMVV8paSw=3D=3D", "user"=3D>{"email"=3D>"=
+ivanternovyi@gmail.com"}, "commit"=3D>"Send me reset password instruction=
+s", "locale"=3D>"en", "controller"=3D>"devise/passwords", "action"=3D>"cr=
+eate"}
+  * action_dispatch.request.path_parameters        : {:controller=3D>"dev=
+ise/passwords", :action=3D>"create"}
+  * action_dispatch.request.query_parameters       : {"locale"=3D>"en"}
+  * action_dispatch.request.request_parameters     : {"utf8"=3D>"=E2=9C=93=
+", "authenticity_token"=3D>"Q9NsGhYt3etljIpX8q47hvHomxw3r8O/FpbiwzvDSJGVE=
+4/xOfiroiagkS4Zt1YH8rIBQBRn43ZvFiMVV8paSw=3D=3D", "user"=3D>{"email"=3D>"=
+ivanternovyi@gmail.com"}, "commit"=3D>"Send me reset password instruction=
+s"}
+  * action_dispatch.request.unsigned_session_cookie: {"session_id"=3D>"e3=
+27f6054312bc68affd45327748d666", "cart_id"=3D>294, "_csrf_token"=3D>"GNQc=
+schLFsQbdIQuRS0ebn9OFF5lCkDUCQj2yf+fNg4=3D"}
+  * action_dispatch.request_id                     : 7513770d-75dd-4fdb-a=
+043-73c488fa1b40
+  * action_dispatch.routes                         : #<ActionDispatch::Ro=
+uting::RouteSet:0x000000045aad58>
+  * action_dispatch.secret_key_base                : 270eb311895ed95217fd=
+76c0a71334bca81da2b030619a90969a0879f41563d02cd629b5cc2d0ed48fdd9bc31ca61=
+31116fab3afff82212085a79121776719f4
+  * action_dispatch.secret_token                   : =
+
+  * action_dispatch.show_detailed_exceptions       : true
+  * action_dispatch.show_exceptions                : true
+  * action_dispatch.signed_cookie_salt             : signed cookie
+  * devise.mapping                                 : #<Devise::Mapping:0x=
+000000049ab268>
+  * puma.config                                    : #<Puma::Configuratio=
+n:0x007fd1c8135460>
+  * puma.socket                                    : #<TCPSocket:0x007fd1=
+c85f72a0>
+  * rack.after_reply                               : []
+  * rack.errors                                    : #<IO:0x00000001f69b0=
+8>
+  * rack.hijack                                    : #<Puma::Client:0x007=
+fd1c85f7278>
+  * rack.hijack?                                   : true
+  * rack.input                                     : #<StringIO:0x007fd1b=
+48b6e50>
+  * rack.multiprocess                              : false
+  * rack.multithread                               : true
+  * rack.request.cookie_hash                       : {"_my_store_session"=
+=3D>"WW13TVhmcEV5a3VMa2szWEF3ZjR6MDBTeUR1ZXlNMnFYbFhYMzBBcUpFNmFPazZ2VnNW=
+bUdMZThuTEVXdTQ5ckNIWjlQR3Exd05EaUZxcklhUjZzZmlMRHZwZjBubWx4RUdsLzN6YlpzU=
+HVHNitacDRqdFlxMWtBbTNJUWpNVnN4SEZuV3g3cGRwbWhocmhSWXhEUEVoa3pSbVB6ZlhTRi=
+tjQllCTFY5dFA4PS0tZXZJMitBb2lvb3lMc1ovRDdkWm1NQT09--d1e7f57a625be2e435c96=
+4ecccb89d260ae3bd06"}
+  * rack.request.cookie_string                     : _my_store_session=3D=
+WW13TVhmcEV5a3VMa2szWEF3ZjR6MDBTeUR1ZXlNMnFYbFhYMzBBcUpFNmFPazZ2VnNWbUdMZ=
+ThuTEVXdTQ5ckNIWjlQR3Exd05EaUZxcklhUjZzZmlMRHZwZjBubWx4RUdsLzN6YlpzUHVHNi=
+tacDRqdFlxMWtBbTNJUWpNVnN4SEZuV3g3cGRwbWhocmhSWXhEUEVoa3pSbVB6ZlhTRitjQll=
+CTFY5dFA4PS0tZXZJMitBb2lvb3lMc1ovRDdkWm1NQT09--d1e7f57a625be2e435c964eccc=
+b89d260ae3bd06
+  * rack.request.form_hash                         : {"utf8"=3D>"=E2=9C=93=
+", "authenticity_token"=3D>"Q9NsGhYt3etljIpX8q47hvHomxw3r8O/FpbiwzvDSJGVE=
+4/xOfiroiagkS4Zt1YH8rIBQBRn43ZvFiMVV8paSw=3D=3D", "user"=3D>{"email"=3D>"=
+ivanternovyi@gmail.com"}, "commit"=3D>"Send me reset password instruction=
+s"}
+  * rack.request.form_input                        : #<StringIO:0x007fd1b=
+48b6e50>
+  * rack.request.form_vars                         : [FILTERED]
+  * rack.request.query_hash                        : {"locale"=3D>"en"}
+  * rack.request.query_string                      : locale=3Den
+  * rack.run_once                                  : false
+  * rack.session                                   : #<ActionDispatch::Re=
+quest::Session:0x007fd1ac50df40>
+  * rack.session.options                           : #<ActionDispatch::Re=
+quest::Session::Options:0x007fd1ac50def0>
+  * rack.tempfiles                                 : []
+  * rack.url_scheme                                : http
+  * rack.version                                   : [1, 3]
+  * warden                                         : Warden::Proxy:702692=
+57936700 @config=3D{:default_scope=3D>:user, :scope_defaults=3D>{}, :defa=
+ult_strategies=3D>{:user=3D>[:rememberable, :database_authenticatable]}, =
+:intercept_401=3D>false, :failure_app=3D>#<Devise::Delegator:0x000000069d=
+f7f0>}
+
+
+
+  
+Errno::ECONNREFUSED (Connection refused - connect(2) for "localhost" port 25):
+  
+/home/ivan/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/net/smtp.rb:542:in `initialize'
+/home/ivan/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/net/smtp.rb:542:in `open'
+/home/ivan/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/net/smtp.rb:542:in `tcp_socket'
+/home/ivan/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/net/smtp.rb:552:in `block in do_start'
+/home/ivan/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/timeout.rb:91:in `block in timeout'
+/home/ivan/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/timeout.rb:101:in `timeout'
+/home/ivan/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/net/smtp.rb:551:in `do_start'
+/home/ivan/.rvm/rubies/ruby-2.3.3/lib/ruby/2.3.0/net/smtp.rb:521:in `start'
+mail (2.6.6) lib/mail/network/delivery_methods/smtp.rb:111:in `deliver!'
+mail (2.6.6) lib/mail/message.rb:2149:in `do_delivery'
+mail (2.6.6) lib/mail/message.rb:237:in `block in deliver'
+actionmailer (5.0.5) lib/action_mailer/base.rb:543:in `block in deliver_mail'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `instrument'
+actionmailer (5.0.5) lib/action_mailer/base.rb:541:in `deliver_mail'
+mail (2.6.6) lib/mail/message.rb:237:in `deliver'
+actionmailer (5.0.5) lib/action_mailer/message_delivery.rb:96:in `block in deliver_now'
+actionmailer (5.0.5) lib/action_mailer/rescuable.rb:15:in `handle_exceptions'
+actionmailer (5.0.5) lib/action_mailer/message_delivery.rb:95:in `deliver_now'
+devise (4.3.0) lib/devise/models/authenticatable.rb:191:in `send_devise_notification'
+devise (4.3.0) lib/devise/models/recoverable.rb:97:in `send_reset_password_instructions_notification'
+devise (4.3.0) lib/devise/models/recoverable.rb:50:in `send_reset_password_instructions'
+devise (4.3.0) lib/devise/models/recoverable.rb:134:in `send_reset_password_instructions'
+devise (4.3.0) app/controllers/devise/passwords_controller.rb:13:in `create'
+actionpack (5.0.5) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.5) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.5) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.5) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.5) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.5) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.5) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.5) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.5) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.5) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.5) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.5) lib/action_dispatch/routing/mapper.rb:16:in `block in <class:Constraints>'
+actionpack (5.0.5) lib/action_dispatch/routing/mapper.rb:46:in `serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.5) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.5) lib/action_dispatch/routing/route_set.rb:727:in `call'
+omniauth (1.6.1) lib/omniauth/strategy.rb:189:in `call!'
+omniauth (1.6.1) lib/omniauth/strategy.rb:167:in `call'
+exception_notification (4.2.1) lib/exception_notification/rack.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.5) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.5) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.5) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.5) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.5) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.5) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.5) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.5) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.5) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.5) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /home/ivan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/ivan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/ivan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.9ms)
+  Rendering /home/ivan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/ivan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /home/ivan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/ivan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/ivan/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.5ms)
+Started GET "/en/" for 127.0.0.1 at 2017-10-24 16:20:27 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (50.9ms)
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (1.3ms)
+Completed 200 OK in 128ms (Views: 121.6ms | ActiveRecord: 1.5ms)
+
+
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "id"."password" = ? LIMIT ?[0m  [["password", "admin"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "id"."admin" = ? LIMIT ?[0m  [["admin", "true"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "id"."admin" = ? LIMIT ?[0m  [["admin", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."admin" = ?[0m  [["admin", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."admin" = ?[0m  [["admin", "true"]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."admin" = ?[0m  [["admin", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."admin" = ?[0m  [["admin", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."admin" = ?[0m  [["admin", "true"]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."admin" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["admin", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."admin" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["admin", "true"], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "superuser@gmail.com"], ["LIMIT", 1]]
+Started GET "/users/sign_in?locale=en" for 127.0.0.1 at 2017-10-24 16:27:27 +0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 71ms (Views: 66.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/sign_in?locale=en" for 127.0.0.1 at 2017-10-24 16:27:37 +0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KFn7V8tF8mdq4mMwgX3LZsPhvUD3N8R1y/S/w9tP5hwQxPFQewuhrYEpFS+bM5bBtyx01OHjnidvQkuI/K5fug==", "user"=>{"email"=>"superuser@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in", "locale"=>"en"}
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "superuser@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-10-24 13:27:37.289860"], ["last_sign_in_at", "2017-09-26 16:32:10.381093"], ["sign_in_count", 10], ["updated_at", "2017-10-24 13:27:37.291004"], ["id", 4]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/en
+Completed 302 Found in 218ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-10-24 16:27:37 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (33.8ms)
+  Rendered layouts/_header.html.erb (4.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 100ms (Views: 94.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-10-24 16:27:37 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-10-24 16:27:37 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-10-24 16:27:37 +0300
+Started GET "/en/" for 127.0.0.1 at 2017-10-24 16:27:42 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (27.2ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 86ms (Views: 80.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/en/" for 127.0.0.1 at 2017-10-24 16:27:50 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (1.9ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (29.7ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 90ms (Views: 82.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/en/cart" for 127.0.0.1 at 2017-10-24 16:27:52 +0300
+Processing by CartController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering cart/index.html.erb within layouts/application
+  [1m[36mItem Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "items" INNER JOIN "cart_items" ON "items"."id" = "cart_items"."item_id" WHERE "cart_items"."cart_id" = ? LIMIT ?[0m  [["cart_id", 294], ["LIMIT", 1]]
+  Rendered cart/index.html.erb within layouts/application (36.8ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 94ms (Views: 87.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/en/items" for 127.0.0.1 at 2017-10-24 16:27:55 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (31.7ms)
+  Rendered layouts/_header.html.erb (7.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 102ms (Views: 97.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/en/items/3/add_to_cart" for 127.0.0.1 at 2017-10-24 16:27:57 +0300
+Processing by ItemsController#add_to_cart as HTML
+  Parameters: {"locale"=>"en", "id"=>"3"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.4ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ? AND "cart_items"."item_id" = ? LIMIT ?[0m  [["cart_id", 294], ["item_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "cart_items" ("item_id", "cart_id", "quantity", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["item_id", 3], ["cart_id", 294], ["quantity", 1], ["created_at", "2017-10-24 13:27:57.506034"], ["updated_at", "2017-10-24 13:27:57.506034"]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/en/items
+Completed 302 Found in 44ms (ActiveRecord: 12.5ms)
+
+
+Started GET "/en/items" for 127.0.0.1 at 2017-10-24 16:27:57 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (32.0ms)
+  Rendered layouts/_header.html.erb (4.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 81ms (Views: 76.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/en/items/3/add_to_cart" for 127.0.0.1 at 2017-10-24 16:27:57 +0300
+Processing by ItemsController#add_to_cart as HTML
+  Parameters: {"locale"=>"en", "id"=>"3"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCartItem Load (0.3ms)[0m  [1m[34mSELECT  "cart_items".* FROM "cart_items" WHERE "cart_items"."cart_id" = ? AND "cart_items"."item_id" = ? LIMIT ?[0m  [["cart_id", 294], ["item_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "cart_items" SET "quantity" = ?, "updated_at" = ? WHERE "cart_items"."id" = ?[0m  [["quantity", 2], ["updated_at", "2017-10-24 13:27:57.697124"], ["id", 72]]
+  [1m[35m (16.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/en/items
+Completed 302 Found in 29ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/en/items" for 127.0.0.1 at 2017-10-24 16:27:57 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (28.9ms)
+  Rendered layouts/_header.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 104ms (Views: 98.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/edit?locale=en" for 127.0.0.1 at 2017-10-24 16:28:00 +0300
+Processing by Devise::RegistrationsController#edit as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 72ms (Views: 69.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/en/" for 127.0.0.1 at 2017-10-24 16:28:02 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (49.6ms)
+  Rendered layouts/_header.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 127ms (Views: 118.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/en/items?utf8=%E2%9C%93&find_item%5Bname_param%5D=5&commit=Find" for 127.0.0.1 at 2017-10-24 16:28:04 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "find_item"=>{"name_param"=>"5"}, "commit"=>"Find", "locale"=>"en"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (name == '5')[0m
+  Rendered items/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (7.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 64.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-10-24 16:28:04 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-10-24 16:28:04 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-10-24 16:28:04 +0300
+Started GET "/en/" for 127.0.0.1 at 2017-10-24 16:28:07 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (30.0ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 88ms (Views: 84.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/en/" for 127.0.0.1 at 2017-10-24 16:28:07 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (32.0ms)
+  Rendered layouts/_header.html.erb (5.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 92ms (Views: 86.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/en/items/15" for 127.0.0.1 at 2017-10-24 16:28:13 +0300
+Processing by ItemsController#show as HTML
+  Parameters: {"locale"=>"en", "id"=>"15"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered items/show.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 58.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/en/items/15/edit" for 127.0.0.1 at 2017-10-24 16:28:15 +0300
+Processing by ItemsController#edit as HTML
+  Parameters: {"locale"=>"en", "id"=>"15"}
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."id" ASC LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering items/edit.html.erb within layouts/application
+  Rendered items/_form.html.erb (15.0ms)
+  Rendered items/edit.html.erb within layouts/application (18.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 89ms (Views: 76.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/en/" for 127.0.0.1 at 2017-10-24 16:28:18 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (48.4ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 114ms (Views: 108.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/ua/items" for 127.0.0.1 at 2017-10-24 16:28:23 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"ua"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (33.0ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 92ms (Views: 86.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/ua/" for 127.0.0.1 at 2017-10-24 16:28:25 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"ua"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (28.0ms)
+  Rendered layouts/_header.html.erb (5.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 98ms (Views: 90.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/ua/" for 127.0.0.1 at 2017-10-24 16:28:25 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"ua"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (32.6ms)
+  Rendered layouts/_header.html.erb (5.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 97ms (Views: 87.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/ua/" for 127.0.0.1 at 2017-10-24 16:28:26 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"ua"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (58.4ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 125ms (Views: 118.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/ua/admin" for 127.0.0.1 at 2017-10-24 16:28:28 +0300
+Processing by AdminController#info as HTML
+  Parameters: {"locale"=>"ua"}
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering admin/info.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."email" ASC[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."name" ASC[0m
+  Rendered admin/info.html.erb within layouts/application (26.4ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 91ms (Views: 81.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/en/admin" for 127.0.0.1 at 2017-10-24 16:28:31 +0300
+Processing by AdminController#info as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering admin/info.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."email" ASC[0m
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items" ORDER BY "items"."name" ASC[0m
+  Rendered admin/info.html.erb within layouts/application (23.4ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 76ms (Views: 69.6ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/users/sign_out?locale=en" for 127.0.0.1 at 2017-10-24 16:28:50 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ZYktdQErDgIfOrOVGVN99hcLgMY2UAERJtKFn7YRNtn5IOwps02+3ir3eSxPJ2+4DYzlRZn7MWrI3wU3IKkNJg==", "locale"=>"en"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 294], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/en
+Completed 302 Found in 8ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-10-24 16:28:50 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "carts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2017-10-24 13:28:50.650587"], ["updated_at", "2017-10-24 13:28:50.650587"]]
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (32.0ms)
+  Rendered layouts/_header.html.erb (4.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 102ms (Views: 80.8ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-10-24 16:28:50 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-10-24 16:28:51 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-10-24 16:28:51 +0300
+Started GET "/users/sign_in?locale=en" for 127.0.0.1 at 2017-10-24 16:28:52 +0300
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 295], ["LIMIT", 1]]
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 79ms (Views: 76.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/auth/facebook?locale=en" for 127.0.0.1 at 2017-10-24 16:28:53 +0300
+Started GET "/users/auth/facebook?locale=en" for 127.0.0.1 at 2017-10-24 16:28:53 +0300
+Started GET "/users/auth/facebook/callback?code=AQA_TLk4F5l89A3OK1aKp3oxhnKki8DiztfwKM8DuffSi6E_ITJIIHu8BxeR8HHaymXdxXjhOmMADQ9VVWzhEngbvEYmeIXkvgwNYeAoOhSjbUbfg1deTPWwONiJMm0w2jqPswhkf604IwwlFLtP9J0VOUdDMh_ikqzRhFjmAVnwq6zYKs4_qdsORf4BTlIKO3gMsHOC1zC-6t-TJAn5woFP3UgfwlPt1YFOuiWwmUXR1cHrmp-q3TDOiXinM0sRcnrHhihHo_k4D-Lz1Px_kv7YyeX2c7PwJiVYL3maSz3TW_C6AXpDN9sAsI6S1om7ST70MU1CVG3OzSwdSkMrcI1y&state=72e8ba668bf1cb7434f84268f0e08a8a8ef933d2ef7a0d1a" for 127.0.0.1 at 2017-10-24 16:28:54 +0300
+Processing by Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQA_TLk4F5l89A3OK1aKp3oxhnKki8DiztfwKM8DuffSi6E_ITJIIHu8BxeR8HHaymXdxXjhOmMADQ9VVWzhEngbvEYmeIXkvgwNYeAoOhSjbUbfg1deTPWwONiJMm0w2jqPswhkf604IwwlFLtP9J0VOUdDMh_ikqzRhFjmAVnwq6zYKs4_qdsORf4BTlIKO3gMsHOC1zC-6t-TJAn5woFP3UgfwlPt1YFOuiWwmUXR1cHrmp-q3TDOiXinM0sRcnrHhihHo_k4D-Lz1Px_kv7YyeX2c7PwJiVYL3maSz3TW_C6AXpDN9sAsI6S1om7ST70MU1CVG3OzSwdSkMrcI1y", "state"=>"72e8ba668bf1cb7434f84268f0e08a8a8ef933d2ef7a0d1a"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 295], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."facebook" IS NULL AND "users"."uid" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["uid", "2066136210283571"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", "2017-10-24 13:28:54.684826"], ["last_sign_in_at", "2017-09-26 15:39:20.726272"], ["sign_in_count", 39], ["updated_at", "2017-10-24 13:28:54.686575"], ["id", 1]]
+  [1m[35m (17.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/en
+Completed 302 Found in 27ms (ActiveRecord: 18.7ms)
+
+
+Started GET "/en" for 127.0.0.1 at 2017-10-24 16:28:54 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 295], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (33.5ms)
+  Rendered layouts/_header.html.erb (4.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 104ms (Views: 98.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-10-24 16:28:54 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-10-24 16:28:55 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-10-24 16:28:55 +0300
+Started GET "/users/edit?locale=en" for 127.0.0.1 at 2017-10-24 16:28:56 +0300
+Processing by Devise::RegistrationsController#edit as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 295], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 75ms (Views: 71.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/en/" for 127.0.0.1 at 2017-10-24 16:29:01 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 295], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (38.3ms)
+  Rendered layouts/_header.html.erb (6.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 110ms (Views: 103.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/en/items?utf8=%E2%9C%93&search%5Bprice_from%5D=5&search%5Bprice_to%5D=82&search%5Bvotes_from%5D=5&search%5Bvotes_to%5D=14&commit=Find" for 127.0.0.1 at 2017-10-24 16:29:05 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>{"price_from"=>"5", "price_to"=>"82", "votes_from"=>"5", "votes_to"=>"14"}, "commit"=>"Find", "locale"=>"en"}
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 295], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "items" WHERE (price >= '5') AND (price <= '82') AND (votes_count >= '5') AND (votes_count <= '14')[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE (price >= '5') AND (price <= '82') AND (votes_count >= '5') AND (votes_count <= '14') ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE (price >= '5') AND (price <= '82') AND (votes_count >= '5') AND (votes_count <= '14') ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  Rendered items/index.html.erb within layouts/application (29.0ms)
+  Rendered layouts/_header.html.erb (6.5ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 100ms (Views: 95.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff2" for 127.0.0.1 at 2017-10-24 16:29:05 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.woff" for 127.0.0.1 at 2017-10-24 16:29:05 +0300
+Started GET "/fonts/bootstrap/glyphicons-halflings-regular.ttf" for 127.0.0.1 at 2017-10-24 16:29:05 +0300
+Started GET "/en/" for 127.0.0.1 at 2017-10-24 16:40:39 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 295], ["LIMIT", 1]]
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (32.4ms)
+  Rendered layouts/_header.html.erb (5.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 92ms (Views: 86.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/en/items/3/upvote" for 127.0.0.1 at 2017-10-24 16:40:43 +0300
+Processing by ItemsController#upvote as HTML
+  Parameters: {"locale"=>"en", "id"=>"3"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 295], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? ORDER BY "items"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (17.4ms)[0m  [1m[33mUPDATE "items" SET "votes_count" = COALESCE("votes_count", 0) + 1 WHERE "items"."id" = ?[0m  [["id", 3]]
+Redirected to http://localhost:3000/en/items
+Completed 302 Found in 25ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/en/items" for 127.0.0.1 at 2017-10-24 16:40:43 +0300
+Processing by ItemsController#index as HTML
+  Parameters: {"locale"=>"en"}
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 295], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  Rendering items/index.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY votes_count DESC, price LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  Rendered items/index.html.erb within layouts/application (36.1ms)
+  Rendered layouts/_header.html.erb (5.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 102ms (Views: 96.4ms | ActiveRecord: 2.2ms)
+
+
