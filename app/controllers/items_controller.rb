@@ -1,9 +1,12 @@
+require "resolv-replace.rb"
+
 class ItemsController < ApplicationController
 
     before_action :find_item,      only: [:show, :edit, :update, :destroy, :upvote, :add_to_cart]
     before_action :check_if_admin, only: [:destroy]
 
     def index
+       # UserNotifierMailer.welcome(User.first).deliver_now
         @items = Item.all
         @maxPrice = @items.map(&:price).max
         @minPrice = @items.map(&:price).min
@@ -48,11 +51,11 @@ class ItemsController < ApplicationController
         else
             render "new"
         end
-        #Need item[variable] in the url zone
-        #@item = Item.create(params[:item])
+        # Need item[variable] in the url zone
+        # @item = Item.create(params[:item])
     end
 
-    #/items/1 PUT
+    # /items/1 PUT
     def update
         @item.update_attributes(item_params)
         if @item.errors.empty?
@@ -61,12 +64,12 @@ class ItemsController < ApplicationController
             render "edit"
         end
     end
-    #GET - render
-    #/items/1 DELETE(POST)
+    # GET - render
+    # /items/1 DELETE(POST)
     def destroy
         @item.destroy
         redirect_to action: "index"
-      #  ItemsMailer.item_destroyed(@item).deliver_now
+      # ItemsMailer.item_destroyed(@item).deliver_now
     end
 
     def upvote
@@ -80,13 +83,12 @@ class ItemsController < ApplicationController
     end
 
     private
-
     def find_item
-         @item = Item.where(id: params[:id]).first
-         render_404 unless @item
+       @item = Item.where(id: params[:id]).first
+       render_404 unless @item
     end
 
     def item_params
-        params.require(:item).permit(:name, :price, :real, :description, :weight, :image)
+      params.require(:item).permit(:name, :price, :real, :description, :weight, :image)
     end
 end

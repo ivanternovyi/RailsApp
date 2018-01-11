@@ -21,31 +21,31 @@ gem 'uglifier'
 gem 'coffee-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-#to send email
+# to send email
 gem 'sendmail', '~> 0.0.1'
-#to upload images
+# to upload images
 gem 'carrierwave'
 # For different versions of an image
 gem 'mini_magick'
-#To use HAML
+# To use HAML
 gem 'haml-rails'
-#Get location by IP
+# Get location by IP
 gem 'geocoder'
-#Pagination gem
+# Pagination gem
 gem 'will_paginate', '>= 3.1'
-#Bootstrap
+# Bootstrap
 gem 'bootstrap-sass', '~> 3.3.6'
-#Internationalization
+# Internationalization
 gem 'i18n'
-#Authentification gem
+# Authentification gem
 gem 'devise'
-#To make authentification with social networks
+# To make authentification with social networks
 gem 'omniauth', '~> 1.6', '>= 1.6.1'
 gem 'omniauth-facebook'
-#Exception Notification
+# Exception Notification
 gem 'exception_notification'
 gem 'letter_opener', group: :development
-#Form usage
+# Form usage
 gem 'simple_form', git: 'git://github.com/plataformatec/simple_form'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -54,6 +54,9 @@ group :test do
    gem 'rspec-rails'
    gem 'factory_girl_rails'
 end
+
+# to send mails
+gem 'pony'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -72,9 +75,9 @@ group :development, :test do
 end
 
 group :development do
-  #check if code is well-written
+  # check if code is well-written
   gem 'rubocop', require: false
-  #check if exist some security warnings
+  # check if exist some security warnings
   gem 'brakeman', :require => false
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
