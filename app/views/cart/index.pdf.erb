@@ -1,0 +1,35 @@
+<h1 align="center">Cheque</h1>
+
+<br/>
+
+  <table cellpadding="10" align="center">
+
+    <tr>
+      <th>Item id</th>
+      <th>Name</th>
+      <th>Per item</th>
+      <th>Quantity</th>
+      <th>Total for item</th>
+    </tr>
+
+    <% @cart.items.each do |i| %>
+        <tr>
+          <td><%= i.id%></td>
+          <td><%= i.name %></td>
+          <td><%= i.price %></td>
+          <td><%= @cart.get_quantity(i.id) %></td>
+          <td><%= get_total_for(i) %></td>
+        </tr>
+    <% end %>
+
+    <tr>
+      <td style = "visibility: hidden;"></td>
+      <td style = "visibility: hidden;"></td>
+      <td style = "visibility: hidden;"></td>
+      <td style = "visibility: hidden;"></td>
+      <td><b>TOTAL:</b> <%= '<span class="glyphicon glyphicon-list-alt"></span> '.html_safe%>
+        <%= get_full_price(@cart.items) %>
+      </td>
+    </tr>
+
+  </table>

@@ -4,6 +4,12 @@ class CartController < ApplicationController
     unless current_user
         redirect_to "/500"
     end
+    respond_to do |format|
+      format.html
+      format.pdf {
+        render pdf: @cart.id.to_s
+      }
+    end
   end
 
   def remove_item

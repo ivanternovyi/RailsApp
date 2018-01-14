@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :items do
       get :upvote, on: :member
       get :add_to_cart, on: :member
-      #get :expensive, on: :collection
+      # get :expensive, on: :collection
     end
 
     resources :cart, only: :index do

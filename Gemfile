@@ -53,8 +53,15 @@ gem 'jquery-rails'
 group :test do
    gem 'rspec-rails'
    gem 'factory_girl_rails'
+   gem 'rails-controller-testing'
 end
 
+# to work with pdf
+gem 'prawn'
+gem 'render_anywhere'
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
+gem 'pdfkit'
 # to send mails
 gem 'pony'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
