@@ -73,7 +73,12 @@ class ItemsController < ApplicationController
     end
 
     def upvote
-        @item.increment!(:votes_count)
+        if session[:votes].nil?
+            @item.increment!(:votes_count)
+            session[:votes] = true
+        else
+            flash[:notice] = 'You can`t upvote more than 1 time!'
+        end
         redirect_to action: :index
     end
 
