@@ -5,6 +5,6 @@ class ItemsMailer < ApplicationMailer
   def item_destroyed(item)
     @item = item
     mail to: 'ivanternovyi@gmail.com',
-          subject: "Item destroyed"
+         subject: 'Item destroyed'
   end
 end

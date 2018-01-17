@@ -1,10 +1,10 @@
-<div class="newItemForm"><h1><%= t("item.hCreate") %></h1>
+<div class="newItemForm"><h1><%= t('item.hCreate') %></h1>
 
 <%= simple_form_for @item do |f| %>
 
-    <%= render partial: "form", locals: {f: f}%>
+    <%= render partial: 'form', locals: {f: f}%>
 
-    <p><%= f.submit t("item.btnCreate")%></p>
+    <p><%= f.submit t('item.btnCreate')%></p>
 
 <% end %>
 </div>
